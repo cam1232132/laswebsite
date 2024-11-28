@@ -20,7 +20,7 @@ body {
 
 /* Topbar */
 .topbar {
-    background-color: #42bb0f; /* Green background */
+    background-color: #808080; /* Grey background */
     padding: 10px 0;
     text-align: center;
 }
@@ -29,7 +29,7 @@ body {
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #42bb0f; /* Matches the topbar */
+    background-color: #808080; /* Matches the topbar */
     padding: 10px 0;
 }
 
@@ -52,22 +52,29 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #EEDC5B; /* Light yellow */
+    background-color: #808080; /* Grey background */
     color: white;
     text-align: center;
     padding: 10px 0;
     position: relative;
     width: 100%;
+    bottom: 0;
     margin-top: auto;
-    bottom: 0;  /* For sticky footer */
 }
 
 /* Fleet Page Fixes */
 .fleet-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
+}
+
+.fleet-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .fleet-item {
@@ -78,13 +85,7 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.fleet-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
 .fleet-item:hover {
     background-color: #e0f7fa; /* Blue hover */
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05); /* Slight zoom */
 }
