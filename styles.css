@@ -13,8 +13,8 @@ body {
 
 /* Primary Logo */
 .primary-logo {
-    max-width: 100px; /* Reduced image size */
-    max-height: 100px;
+    max-width: 80px; /* Reduced image size */
+    max-height: 80px;
     display: block;
     margin: 0 auto;
 }
@@ -84,6 +84,11 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 300px;
     margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.medic-card:hover {
+    background-color: gold; /* Golden hover effect */
 }
 
 .medic-card h3 {
