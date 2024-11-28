@@ -1,4 +1,5 @@
-body, html { 
+/* General Body Styles */
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -20,7 +21,7 @@ body {
 
 /* Topbar */
 .topbar {
-    background-color: #1A3D6E; /* Dark blueish color */
+    background-color: #0300ff; /* Dark blue background */
     padding: 10px 0;
     text-align: center;
 }
@@ -29,7 +30,7 @@ body {
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #1A3D6E; /* Matches the topbar */
+    background-color: #0300ff; /* Matches the topbar */
     padding: 10px 0;
 }
 
@@ -52,7 +53,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #A9C8F3; /* Light blue color */
+    background-color: #6172f6; /* Light blue background */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -60,6 +61,73 @@ body {
     width: 100%;
     bottom: 0;
     margin-top: auto;
+}
+
+/* Leadership Team */
+.leadership-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.leadership-member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.top {
+    flex-direction: column;
+    text-align: center;
+}
+
+.middle {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.chief {
+    text-align: center;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.deputy, .hr {
+    text-align: center;
+}
+
+.leader-photo {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.leadership-member h2, .leadership-member h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+/* Content Borders */
+.bordered-content {
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
 }
 
 /* Fleet Page Fixes */
@@ -83,38 +151,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-/* Leadership Team */
-.leadership-member {
-    margin-bottom: 20px;
 }
-
-.leadership-member h2 {
-    font-size: 1.5em;
-    color: #333;
-}
-
-.leader-photo {
-    width: 150px;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-    margin-top: 10px;
-}
-
-.leaders {
-    display: flex;
-    gap: 20px;
-}
-
-.leader {
-    text-align: center;
-}
-
-.leader h3 {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
 
 .fleet-item:hover {
     background-color: #e0f7fa; /* Blue hover */
