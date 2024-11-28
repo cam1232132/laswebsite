@@ -3,202 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medic of The Week</title>
-    <link rel="stylesheet" href="../css/style.css"> <!-- Link to your existing CSS file -->
-    <style>
-        /* Ensure the page content stretches and footer stays at bottom */
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-
-        .content {
-            flex: 1;
-            padding: 20px;
-        }
-
-        /* Topbar Styling */
-        .topbar {
-            background-color: #1d2d6e; /* Blue color matching your other pages */
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .topbar img {
-            max-width: 150px;
-            max-height: 150px;
-        }
-
-        /* Navigation Links */
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            background-color: #1d2d6e; /* Blue color matching your other pages */
-            padding: 10px 0;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        .medic-container {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .medic-container h1 {
-            color: #333;
-        }
-
-        .current-medic {
-            background-color: #fff;
-            margin: 20px auto;
-            padding: 40px;
-            border-radius: 10px;
-            border: 2px solid #ccc;
-            max-width: 600px;
-            transition: all 0.3s ease;
-        }
-
-        .current-medic:hover {
-            background-color: #fbc02d; /* Golden/yellow background on hover */
-            transform: scale(1.05);
-        }
-
-        .current-medic h2 {
-            font-size: 24px;
-            color: #333;
-        }
-
-        .current-medic p {
-            font-size: 16px;
-            color: #777;
-        }
-
-        .current-medic:hover h2 {
-            font-size: 28px; /* Larger text on hover */
-        }
-
-        .history-container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-        }
-
-        .history-item {
-            background-color: #f9f9f9;
-            margin: 10px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 45%;
-            transition: all 0.3s ease;
-        }
-
-        .history-item:hover {
-            background-color: #e0e0e0;
-            transform: scale(1.05);
-        }
-
-        .history-item h3 {
-            margin: 0;
-            font-size: 20px;
-            color: #333;
-        }
-
-        .history-item p {
-            margin: 5px 0;
-            font-size: 14px;
-            color: #777;
-        }
-
-        /* Footer Style */
-        .footer {
-            background-color: #1d2d6e; /* Blue color matching your other pages */
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            width: 100%;
-            bottom: 0;
-        }
-
-        /* Make footer stick at bottom */
-        body {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .footer {
-            margin-top: auto;
-        }
-
-        .credit-bar {
-            background-color: #333;
-            color: white;
-            padding: 5px 0;
-            text-align: center;
-            font-size: 14px;
-        }
-    </style>
+    <title>Medic of the Week - LDN Ambulance Service</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Topbar -->
     <div class="topbar">
-        <img src="../Images/LAS_primary.png" alt="LDN Ambulance Service" class="primary-logo">
+        <div class="topbar-logo">
+            <img src="Images/LAS_primary.png" alt="LDN Ambulance Service Logo">
+        </div>
+        <div class="topbar-links">
+            <a href="index.html">Home</a>
+            <a href="fleet.html">Fleet</a>
+            <a href="faq.html">FAQ</a>
+            <a href="leadership_team.html">Leadership Team</a>
+        </div>
     </div>
-    <nav class="nav-links">
-        <a href="../index.html">Home</a>
-        <a href="../fleet.html">Fleet</a>
-        <a href="../faq.html">FAQ</a>
-        <a href="../meet_our_leadership_team.html">Leadership Team</a>
-    </nav>
 
-    <!-- Content -->
     <div class="content">
-        <div class="medic-container">
-            <h1>Medic of The Week</h1>
-            
-            <!-- Current Medic of the Week -->
-            <div class="current-medic">
-                <h2>Tom Riggers</h2>
-                <p>Advanced Paramedic</p>
-                <p><strong>Recognized:</strong> 24/11/24</p>
-            </div>
+        <h1>Medic of The Week</h1>
+        <div class="medic-box">
+            <h2>Tom Riggers</h2>
+            <p>Advanced Paramedic</p>
+            <p>Recognized: 24/11/24</p>
+        </div>
 
-            <!-- History Section -->
-            <h3>Previous Medic of The Week</h3>
-            <div class="history-container">
-                <div class="history-item">
-                    <h3>Peter Portland</h3>
-                    <p>Director of Clinical Education</p>
-                    <p><strong>Recognized:</strong> 13/11/24–20/11/24</p>
-                </div>
-                <div class="history-item">
-                    <h3>Jack Forskin</h3>
-                    <p>Newly Qualified Paramedic</p>
-                    <p><strong>Recognized:</strong> 6/11/24–13/11/24</p>
-                </div>
+        <h2>Previous Medic of The Week</h2>
+        <div class="history-container">
+            <div class="history-item">
+                <h3>Peter Portland</h3>
+                <p>Director of Clinical Education</p>
+                <p>Recognized: 13/11/24–20/11/24</p>
+            </div>
+            <div class="history-item">
+                <h3>Jack Forskin</h3>
+                <p>Newly Qualified Paramedic</p>
+                <p>Recognized: 6/11/24–13/11/24</p>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>LDN Ambulance Service</p>
-    </footer>
-
-    <!-- Credit Bar -->
-    <div class="credit-bar">
-        <p>Website by LDN Ambulance Service Team | All rights reserved</p>
+    <div class="footer">
+        <p>LDN Ambulance Service | Website created by Cameron Hall, Deputy Chief</p>
     </div>
 </body>
 </html>
