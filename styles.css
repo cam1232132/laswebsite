@@ -41,7 +41,8 @@ body {
     flex-grow: 1; /* This allows the header to take up the space in the middle */
     position: absolute;
     left: 50%;
-    transform: translateX(-55%); /* Slight shift to the left to align it better */
+    transform: translateX(-50%); /* Center it horizontally */
+    top: 10px; /* Raised the title slightly */
 }
 
 /* Centered links container at the bottom of the topbar */
