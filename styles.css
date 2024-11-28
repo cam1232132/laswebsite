@@ -21,7 +21,7 @@ body {
 
 /* Topbar */
 .topbar {
-    background-color: #42bb0f; /* Gray background */
+    background-color: #42bb0f; /* Green background */
     padding: 10px 0;
     text-align: center;
 }
@@ -53,7 +53,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #EEDC5B;
+    background-color: #EEDC5B; /* Yellow background */
     color: white;
     text-align: center;
     padding: 10px 0;
