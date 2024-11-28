@@ -6,6 +6,48 @@
     <title>Medic of The Week</title>
     <link rel="stylesheet" href="../css/style.css"> <!-- Link to your existing CSS file -->
     <style>
+        /* Ensure the page content stretches and footer stays at bottom */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Topbar Styling */
+        .topbar {
+            background-color: #808080; /* Grey background */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .topbar img {
+            max-width: 150px;
+            max-height: 150px;
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            background-color: #808080; /* Matches the topbar */
+            padding: 10px 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
         .medic-container {
             padding: 20px;
             text-align: center;
@@ -76,6 +118,18 @@
             font-size: 14px;
             color: #777;
         }
+
+        /* Footer Style */
+        .footer {
+            background-color: #808080; /* Grey background */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            margin-top: auto;
+        }
     </style>
 </head>
 <body>
@@ -92,29 +146,30 @@
     </nav>
 
     <!-- Content -->
-    <div class="medic-container">
-        <h1>Medic of The Week</h1>
-        <p>Celebrating the dedication of our team members</p>
-        
-        <!-- Current Medic of the Week -->
-        <div class="current-medic">
-            <h2>Tom Riggers</h2>
-            <p>Advanced Paramedic</p>
-            <p><strong>Recognized:</strong> 24/11/24</p>
-        </div>
-
-        <!-- History Section -->
-        <h3>Previous Medic of The Week</h3>
-        <div class="history-container">
-            <div class="history-item">
-                <h3>Peter Portland</h3>
-                <p>Director of Clinical Education</p>
-                <p><strong>Recognized:</strong> 13/11/24–20/11/24</p>
+    <div class="content">
+        <div class="medic-container">
+            <h1>Medic of The Week</h1>
+            
+            <!-- Current Medic of the Week -->
+            <div class="current-medic">
+                <h2>Tom Riggers</h2>
+                <p>Advanced Paramedic</p>
+                <p><strong>Recognized:</strong> 24/11/24</p>
             </div>
-            <div class="history-item">
-                <h3>Jack Forskin</h3>
-                <p>Newly Qualified Paramedic</p>
-                <p><strong>Recognized:</strong> 6/11/24–13/11/24</p>
+
+            <!-- History Section -->
+            <h3>Previous Medic of The Week</h3>
+            <div class="history-container">
+                <div class="history-item">
+                    <h3>Peter Portland</h3>
+                    <p>Director of Clinical Education</p>
+                    <p><strong>Recognized:</strong> 13/11/24–20/11/24</p>
+                </div>
+                <div class="history-item">
+                    <h3>Jack Forskin</h3>
+                    <p>Newly Qualified Paramedic</p>
+                    <p><strong>Recognized:</strong> 6/11/24–13/11/24</p>
+                </div>
             </div>
         </div>
     </div>
