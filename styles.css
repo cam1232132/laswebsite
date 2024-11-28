@@ -41,7 +41,7 @@ body {
     flex-grow: 1; /* This allows the header to take up the space in the middle */
 }
 
-/* Centered links container */
+/* Centered links container at the bottom of the topbar */
 .topbar-links-container {
     position: absolute;
     bottom: 10px;
@@ -58,7 +58,7 @@ body {
 }
 
 .topbar-links-container a:hover {
-    text-decoration: underline;
+    color: grey; /* Change text color to grey on hover */
 }
 
 /* Content Section */
