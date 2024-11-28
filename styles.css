@@ -13,8 +13,8 @@ body {
 
 /* Primary Logo */
 .primary-logo {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 100px; /* Reduced image size */
+    max-height: 100px;
     display: block;
     margin: 0 auto;
 }
@@ -27,26 +27,12 @@ body {
     justify-content: space-between;
     align-items: center; /* Vertically center the content */
     padding: 10px 20px;
+    position: relative;
 }
 
-/* Center the logo and text content in the topbar */
 .topbar .topbar-logo {
     display: flex;
     justify-content: flex-start; /* Keep logo on the left */
-}
-
-.topbar .topbar-links {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-}
-
-.topbar .topbar-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
 }
 
 .topbar .topbar-header {
@@ -55,8 +41,23 @@ body {
     flex-grow: 1; /* This allows the header to take up the space in the middle */
 }
 
-/* Additional styles */
-.topbar-links a:hover {
+/* Centered links container */
+.topbar-links-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the links horizontally */
+    display: flex;
+    gap: 20px;
+}
+
+.topbar-links-container a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topbar-links-container a:hover {
     text-decoration: underline;
 }
 
