@@ -11,7 +11,7 @@ body {
 }
 
 .topbar {
-    background-color: #003366; /* Correct blue color */
+    background-color: #0300ff; /* Updated blue color */
     color: white;
     display: flex;
     justify-content: space-between;
@@ -19,7 +19,15 @@ body {
 }
 
 .topbar-logo img {
-    max-width: 120px;
+    max-width: 150px; /* Set logo width to 150px */
+    display: block;
+    margin: 0 auto; /* Center logo */
+}
+
+.topbar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .topbar-links a {
@@ -36,6 +44,7 @@ body {
 .content {
     flex: 1;
     padding: 20px;
+    text-align: center; /* Center align content */
 }
 
 .medic-box {
@@ -56,6 +65,7 @@ body {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
+    text-align: center; /* Center history items */
 }
 
 .history-item {
@@ -72,7 +82,7 @@ body {
 }
 
 .footer {
-    background-color: #003366; /* Correct blue color */
+    background-color: #6172f6; /* Updated footer color */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -85,3 +95,4 @@ body {
 .footer p {
     margin: 0;
 }
+
