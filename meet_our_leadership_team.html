@@ -4,57 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meet Our Leadership Team</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .member {
+            text-align: center;
+            width: 200px;
+        }
+
+        .member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 2px solid #ccc;
+        }
+
+        .member h3 {
+            margin: 5px 0;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .member p {
+            margin: 0;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
-    <div class="topbar">
-        <img src="Images/LAS primary.png" alt="LDN Ambulance Service Logo" class="primary-logo">
-        <div class="nav-links">
-            <a href="overview.html">Overview</a>
-            <a href="car_fleet.html">Car Fleet</a>
-            <a href="medic_of_week.html">Medic of the Week</a>
-            <a href="top_five_hours.html">Top Five Hours</a>
-            <a href="faq.html">FAQ</a>
-            <a href="meet_our_leadership_team.html">Leadership Team</a>
-        </div>
-    </div>
-
-    <div class="content">
+    <div class="container">
         <h1>Meet Our Leadership Team</h1>
-        <div class="leadership-container">
-            <div class="leadership-member">
-                <h2>Director of Ambulance Operations: Alex Ambruise</h2>
-                <p>No photo available</p>
+        <div class="team">
+            <!-- Team Member 1 -->
+            <div class="member">
+                <img src="Images/Tin_Tin.png" alt="Tin Tin">
+                <h3>Tin Tin</h3>
+                <p>Chief Ambulance Officer</p>
             </div>
-            <div class="leadership-member">
-                <h2>Chief Executive Officer: Steven Whiteside</h2>
-                <p>No photo available</p>
+            <!-- Team Member 2 -->
+            <div class="member">
+                <img src="Images/cameron_hall.png" alt="Cameron Hall">
+                <h3>Cameron Hall</h3>
+                <p>Deputy Chief Ambulance Officer</p>
             </div>
-            <div class="leadership-member">
-                <h2>Chief Ambulance Officer: Tin Tin</h2>
-                <img src="../Images/Tin Tin.png" alt="Tin Tin">
+            <!-- Team Member 3 -->
+            <div class="member">
+                <img src="Images/peter_portland.png" alt="Peter Portland">
+                <h3>Peter Portland</h3>
+                <p>Director of Clinical Education</p>
             </div>
-            <div class="leadership-member">
-                <h2>Deputy Chief Ambulance Officer: Cameron Hall</h2>
-                <img src="Images/cameron hall.png" alt="Cameron Hall">
+            <!-- Team Member 4 -->
+            <div class="member">
+                <img src="Images/mark_mitchel.png" alt="Mark Mitchel">
+                <h3>Mark Mitchel</h3>
+                <p>Human Resources</p>
             </div>
-            <div class="leadership-member">
-                <h2>Director of Clinical Education: Peter Portland</h2>
-                <img src="Images/peter portland.png" alt="Peter Portland">
-            </div>
-            <div class="leadership-member">
-                <h2>Human Resources: Mark Mitchel</h2>
-                <img src="Images/mark mitchel.png" alt="Mark Mitchel">
-            </div>
-            <div class="leadership-member">
-                <h2>Human Resources: Jhon Green</h2>
-                <img src="Images/jhon green.png" alt="Jhon Green">
+            <!-- Team Member 5 -->
+            <div class="member">
+                <img src="Images/jhon_green.png" alt="Jhon Green">
+                <h3>Jhon Green</h3>
+                <p>Human Resources</p>
             </div>
         </div>
-    </div>
-
-    <div class="footer">
-        <p>LDN Ambulance Service | Website created by Cameron Hall, Deputy Chief</p>
     </div>
 </body>
 </html>
