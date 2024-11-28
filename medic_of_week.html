@@ -19,7 +19,7 @@
 
         /* Topbar Styling */
         .topbar {
-            background-color: #808080; /* Grey background */
+            background-color: #0073e6; /* Blue color */
             padding: 10px 0;
             text-align: center;
         }
@@ -33,7 +33,7 @@
         .nav-links {
             display: flex;
             justify-content: center;
-            background-color: #808080; /* Matches the topbar */
+            background-color: #0073e6; /* Blue color */
             padding: 10px 0;
         }
 
@@ -121,13 +121,23 @@
 
         /* Footer Style */
         .footer {
-            background-color: #808080; /* Grey background */
+            background-color: #0073e6; /* Blue color */
             color: white;
             text-align: center;
             padding: 10px 0;
             position: relative;
             width: 100%;
             bottom: 0;
+        }
+
+        /* Make footer stick at bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .footer {
             margin-top: auto;
         }
     </style>
@@ -135,7 +145,7 @@
 <body>
     <!-- Topbar -->
     <div class="topbar">
-        <img src="../Images/logo.png" alt="LDN Ambulance Service" class="primary-logo">
+        <img src="../Images/LAS primary.png" alt="LDN Ambulance Service" class="primary-logo">
     </div>
     <nav class="nav-links">
         <a href="../index.html">Home</a>
@@ -180,3 +190,4 @@
     </footer>
 </body>
 </html>
+
