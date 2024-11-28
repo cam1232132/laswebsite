@@ -1,5 +1,5 @@
-/* General Body Styles */
-body, html {
+/* Reset */
+body, html { 
     margin: 0;
     padding: 0;
     height: 100%;
@@ -21,7 +21,7 @@ body {
 
 /* Topbar */
 .topbar {
-    background-color: #0300ff; /* Dark blue background */
+    background-color: #0300ff; /* Dark blue */
     padding: 10px 0;
     text-align: center;
 }
@@ -49,27 +49,16 @@ body {
 .content {
     flex: 1;
     padding: 20px;
-}
-
-/* Footer */
-.footer {
-    background-color: #6172f6; /* Light blue background */
-    color: white;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    margin-top: auto;
 }
 
-/* Leadership Team Grid */
+/* Leadership Container */
 .leadership-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns for team members */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    margin-bottom: 50px; /* Adjust for footer */
+    justify-items: center;
 }
 
 .leadership-member {
@@ -78,6 +67,11 @@ body {
     border: 2px solid #ccc;
     border-radius: 8px;
     background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+}
+
+.leadership-member:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .leader-photo {
@@ -87,49 +81,14 @@ body {
     margin-top: 10px;
 }
 
-h1 {
+/* Footer */
+.footer {
+    background-color: #6172f6; /* Light blue */
+    color: white;
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 40px;
-}
-
-/* Content Borders */
-.bordered-content {
-    border: 2px solid #ccc;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-}
-
-/* Fleet Page Fixes */
-.fleet-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.fleet-item img {
+    padding: 10px 0;
+    position: relative;
     width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.fleet-item {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover */
-    transform: scale(1.05); /* Slight zoom */
-}
-
-.fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover */
-    transform: scale(1.05); /* Slight zoom */
+    bottom: 0;
+    margin-top: auto;
 }
