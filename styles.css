@@ -83,7 +83,38 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+/* Leadership Team */
+.leadership-member {
+    margin-bottom: 20px;
 }
+
+.leadership-member h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.leader-photo {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-top: 10px;
+}
+
+.leaders {
+    display: flex;
+    gap: 20px;
+}
+
+.leader {
+    text-align: center;
+}
+
+.leader h3 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
 
 .fleet-item:hover {
     background-color: #e0f7fa; /* Blue hover */
