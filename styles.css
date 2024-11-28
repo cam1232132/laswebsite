@@ -1,76 +1,92 @@
-/* Resetting default browser margins/padding */
-* {
+/* General Reset */
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    height: 100%;
 }
 
-/* Body styling */
 body {
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+}
+
+/* Primary Logo */
+.primary-logo {
+    max-width: 150px;
+    max-height: 150px;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Topbar */
 .topbar {
-    background-color: #0300ff; /* Blue */
-    padding: 10px;
+    background-color: #42bb0f; /* Gray background */
+    padding: 10px 0;
     text-align: center;
+}
+
+/* Navigation Links */
+.nav-links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    justify-content: center;
+    background-color: #42bb0f; /* Matches the topbar */
+    padding: 10px 0;
 }
 
-.topbar .primary-logo {
-    max-width: 150px;
-}
-
-.topbar .nav-links a {
+.nav-links a {
     color: white;
     text-decoration: none;
-    padding: 10px;
-    margin: 0 5px;
+    margin: 0 15px;
     font-weight: bold;
 }
 
-.topbar .nav-links a:hover {
-    background-color: #4CAF50;
-    border-radius: 5px;
+.nav-links a:hover {
+    text-decoration: underline;
 }
 
-/* Container for main content */
-.container {
+/* Content Section */
+.content {
+    flex: 1;
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff;
-}
-
-/* Info Sections (What is LAS? and What is this website for?) */
-.info-section {
-    margin-bottom: 30px;
-}
-
-.info-section h2 {
-    color: #0300ff; /* Blue */
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.info-section p {
-    font-size: 16px;
-    color: #555;
 }
 
 /* Footer */
-footer {
-    background-color: #6172f6; /* Light Blue */
+.footer {
+    background-color: #EEDC5B;
     color: white;
     text-align: center;
-    padding: 10px;
-    margin-top: 30px;
-    /* Removing fixed positioning so it stays at the bottom */
+    padding: 10px 0;
     position: relative;
     width: 100%;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* Fleet Page Fixes */
+.fleet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.fleet-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.fleet-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fleet-item:hover {
+    background-color: #e0f7fa; /* Blue hover */
+    transform: scale(1.05); /* Slight zoom */
 }
