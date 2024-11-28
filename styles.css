@@ -36,7 +36,8 @@ body {
 
 .topbar .topbar-header {
     text-align: center;
-    font-size: 1.5em; /* Adjust header size */
+    font-size: 2em; /* Increased text size for Medic of the Week */
+    font-weight: bold;
     flex-grow: 1; /* This allows the header to take up the space in the middle */
     position: absolute;
     left: 50%;
