@@ -1,89 +1,78 @@
-/* General Reset */
-body, html {
+/* Resetting default browser margins/padding */
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
+    box-sizing: border-box;
 }
 
+/* Body styling */
 body {
-    display: flex;
-    flex-direction: column;
     font-family: Arial, sans-serif;
-}
-
-/* Primary Logo */
-.primary-logo {
-    max-width: 150px;
-    max-height: 150px;
-    display: block;
-    margin: 0 auto;
+    background-color: #f4f4f4;
 }
 
 /* Topbar */
 .topbar {
-    background-color: #42bb0f; /* Green background */
-    padding: 10px 0;
+    background-color: #006400; /* Green */
+    padding: 10px;
     text-align: center;
-}
-
-/* Navigation Links */
-.nav-links {
     display: flex;
-    justify-content: center;
-    background-color: #42bb0f; /* Matches the topbar */
-    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-.nav-links a {
+.topbar .primary-logo {
+    max-width: 150px;
+}
+
+.topbar .nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    padding: 10px;
+    margin: 0 5px;
     font-weight: bold;
 }
 
-.nav-links a:hover {
-    text-decoration: underline;
+.topbar .nav-links a:hover {
+    background-color: #4CAF50;
+    border-radius: 5px;
 }
 
-/* Content Section */
-.content {
-    flex: 1;
+/* Container for main content */
+.container {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/* Info Sections (What is LAS? and What is this website for?) */
+.info-section {
+    margin-bottom: 30px;
+}
+
+.info-section h2 {
+    color: #006400;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    font-size: 16px;
+    color: #555;
 }
 
 /* Footer */
-.footer {
-    background-color: #EEDC5B; /* Yellow background */
+footer {
+    background-color: #FFD700; /* Dull Yellow */
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    margin-top: auto;
-}
-
-/* Fleet Page Fixes */
-.fleet-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.fleet-item img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.fleet-item {
-    text-align: center;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .fleet-item:hover {
