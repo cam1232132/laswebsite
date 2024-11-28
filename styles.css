@@ -51,15 +51,12 @@ body {
     text-align: center;
 }
 
-/* Fleet Page Fixes */
+/* Fleet Page Layout */
 .fleet-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
-    grid-template-rows: repeat(2, auto);  /* 2 rows */
+    grid-template-columns: repeat(4, 1fr); /* 4 cars per row */
     gap: 20px;
     padding: 20px;
-    justify-items: center; /* Centers items horizontally */
-    align-items: center; /* Centers items vertically */
 }
 
 .fleet-item {
