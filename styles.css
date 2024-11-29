@@ -4,6 +4,8 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Primary Logo */
@@ -71,13 +73,7 @@ body, html {
     grid-template-columns: repeat(4, 1fr); /* 4 cars per row */
     gap: 20px;
     padding: 20px;
-}
-
-.fleet-item img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-bottom: 80px; /* Ensures footer doesn't overlap */
 }
 
 .fleet-item {
@@ -86,6 +82,17 @@ body, html {
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fleet-item img {
+    width: 100%;
+    height: auto;
+    max-height: 150px; /* Ensure images are a consistent size */
+    object-fit: cover;
 }
 
 .fleet-item:hover {
@@ -119,3 +126,15 @@ body, html {
 .medic h2 {
     margin-top: 0;
 }
+
+/* Ensure Footer is always at the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex-grow: 1;
+}
+
