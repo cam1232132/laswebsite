@@ -1,104 +1,37 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
-
-/* Topbar */
+/* General Topbar and Footer Styles */
 .topbar {
     background-color: #003366;
-    padding: 15px 0;
-    position: relative;
+    padding: 15px;
     text-align: center;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Navigation Links */
-.topbar nav {
+.topbar .topbar-logo {
+    max-width: 100px; /* Resize logo for appropriate size */
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     bottom: 10px;
     width: 100%;
 }
 
-.topbar nav a {
+.nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 15px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
 }
 
-.topbar nav a:hover {
+.nav-links a:hover {
     color: grey;
-}
-
-/* Content Section */
-.content {
-    flex: 1;
-    padding: 20px;
-}
-
-/* Medic of the Week Containers */
-.medic-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.medic-card {
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 200px;
-    border: 2px solid #ccc;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.medic-card h3 {
-    margin-bottom: 10px;
-}
-
-.medic-card p {
-    font-size: 14px;
-}
-
-.medic-card:hover {
-    transform: scale(1.05);
-    background-color: #ffd700; /* Golden hover effect */
-}
-
-/* Top Five Hours Containers */
-.top-five-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.top-five-card {
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 200px;
-    border: 2px solid #ccc;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.top-five-card h3 {
-    margin-bottom: 10px;
-}
-
-.top-five-card p {
-    font-size: 14px;
-}
-
-.top-five-card:hover {
-    transform: scale(1.05);
-    background-color: #ffd700; /* Golden hover effect */
 }
 
 /* Footer */
@@ -109,23 +42,94 @@ body, html {
     padding: 10px 0;
     position: relative;
     width: 100%;
-    bottom: 0;
     margin-top: auto;
 }
 
-/* FAQ Page: Remove Golden Hover Effect */
-.faq-container .faq-item:hover {
-    background-color: transparent; /* No hover effect */
+/* Medic of the Week Page */
+.medic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    gap: 20px;
 }
 
-/* Media Query for Mobile Responsiveness */
-@media (max-width: 768px) {
-    .topbar nav {
-        position: static;
-        margin-top: 10px;
-    }
-    .medic-container, .top-five-container {
-        flex-direction: column;
-        gap: 15px;
-    }
+.medic-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 300px;
+}
+
+.medic-card:hover {
+    background-color: gold;
+    transform: scale(1.05);
+}
+
+/* Top Five Hours Page */
+.top-five-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+.top-five-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 300px;
+}
+
+.top-five-card:hover {
+    background-color: gold;
+    transform: scale(1.05);
+}
+
+/* Car Fleet Page Grid Layout */
+.fleet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.fleet-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.fleet-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.fleet-item:hover {
+    background-color: #e0f7fa; /* Blue hover effect */
+    transform: scale(1.05);
+}
+
+/* Miscellaneous Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ensure footer is always at the bottom */
+main {
+    flex: 1;
 }
