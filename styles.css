@@ -74,6 +74,7 @@ body, html {
     gap: 20px;
     padding: 20px;
     margin-bottom: 80px; /* Ensures footer doesn't overlap */
+    grid-template-rows: repeat(2, auto); /* Ensure 2 rows */
 }
 
 .fleet-item {
@@ -137,4 +138,3 @@ body {
 .content {
     flex-grow: 1;
 }
-
