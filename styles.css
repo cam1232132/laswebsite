@@ -54,7 +54,7 @@ img {
 /* Title in Topbar */
 .topbar h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 30px; /* Increased font size */
     text-align: center;
     line-height: 90px; /* Vertically center the title */
 }
@@ -81,7 +81,7 @@ img {
 /* Footer Styles */
 .footer {
     background-color: #0056b3; /* Blue color */
-    color: white;
+    color: white; /* Set footer text color to white */
     text-align: center;
     padding: 10px 0;
     position: relative;
@@ -127,7 +127,7 @@ img {
 
 /* Adjusting topbar and footer to be blue, title centered in topbar */
 .topbar h1 {
-    font-size: 24px;
+    font-size: 30px; /* Increased font size for title */
     margin: 0;
     text-align: center;
 }
