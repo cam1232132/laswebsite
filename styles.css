@@ -54,9 +54,10 @@ img {
 /* Title in Topbar */
 .topbar h1 {
     margin: 0;
-    font-size: 30px; /* Increased font size */
+    font-size: 36px; /* Increased font size */
     text-align: center;
     line-height: 90px; /* Vertically center the title */
+    color: white; /* Ensure the title color is white */
 }
 
 /* Navigation Links in Topbar */
@@ -127,9 +128,10 @@ img {
 
 /* Adjusting topbar and footer to be blue, title centered in topbar */
 .topbar h1 {
-    font-size: 30px; /* Increased font size for title */
+    font-size: 36px; /* Increased font size for title */
     margin: 0;
     text-align: center;
+    color: white;
 }
 
 /* Spacing between "What is LAS?" and "What is this website for?" */
