@@ -1,11 +1,14 @@
-/* General Body Styling */
+/* General Styling */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
+}
+
+body {
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif;
 }
 
 /* Primary Logo */
@@ -18,36 +21,79 @@ body, html {
 
 /* Topbar */
 .topbar {
-    background-color: #0077b6; /* Darker Blue */
-    padding: 20px 0;
+    background-color: #006db6; /* Blue background */
+    padding: 20px 10px;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: calc(150px + 10px); /* 10px bigger than the primary image */
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
-.topbar img {
-    max-height: 150px;
-    max-width: 150px;
-    margin-left: 20px;
-}
-
-.topbar-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.topbar-links a {
+.topbar a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    margin: 0 15px;
 }
 
-.topbar-links a:hover {
-    color: #d9d9d9;
+.topbar a:hover {
+    color: grey; /* Grey hover effect */
+}
+
+/* Car Fleet Page */
+.fleet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cars per row */
+    gap: 20px;
+    padding: 20px;
+    grid-auto-rows: minmax(350px, auto); /* Ensure containers are big enough */
+}
+
+.fleet-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 350px;
+}
+
+.fleet-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    background-color: #e0f7fa; /* Blue hover effect */
+}
+
+.fleet-item img {
+    width: 100%;
+    height: 150px; /* Fixed height for images */
+    object-fit: contain; /* Maintain image aspect ratio */
+    margin-bottom: 15px;
+}
+
+.fleet-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.fleet-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 10px;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4; /* Limit description to 4 lines */
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
 }
 
 /* Content Section */
@@ -58,77 +104,75 @@ body, html {
 
 /* Footer */
 .footer {
-    background-color: #0077b6; /* Darker Blue */
+    background-color: #006db6; /* Blue background */
     color: white;
     text-align: center;
     padding: 10px 0;
     position: relative;
     width: 100%;
     bottom: 0;
+    margin-top: auto;
 }
 
-/* Fleet Page Styling */
-.fleet-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cars per row */
-    gap: 20px;
-    padding: 20px;
-    margin-bottom: 80px; /* Ensures footer doesn't overlap */
-    grid-template-rows: repeat(2, auto); /* Ensure 2 rows */
-}
-
-.fleet-item {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    height: 200px;
+/* Navigation Links */
+.nav-links {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    background-color: #006db6; /* Matches the topbar */
+    padding: 10px 0;
 }
 
-.fleet-item img {
-    width: 100%;
-    height: auto;
-    max-height: 150px; /* Ensure images are a consistent size */
-    object-fit: cover;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-.fleet-item:hover {
-    background-color: #ffcc00; /* Yellow on hover */
-    transform: scale(1.05); /* Slight zoom */
+.nav-links a:hover {
+    color: grey; /* Grey hover effect */
 }
 
-/* Medic of the Week Container */
+/* Medic of the Week Page */
 .medic-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.medic {
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    background-color: #f0f0f0;
     padding: 20px;
-    width: 30%;
-    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.medic:hover {
-    background-color: #ffcc00; /* Yellow on hover */
+.medic-container h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
 }
 
-.medic-details p {
-    margin: 5px 0;
+.medic-container img {
+    max-width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
 }
 
-.medic h2 {
-    margin-top: 0;
+.medic-container p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
 }
 
-/* Ensure Footer is always at the bottom */
+/* Footer adjustments */
+.footer {
+    background-color: #006db6;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* Ensure footer is at the bottom of the page */
 body {
     display: flex;
     flex-direction: column;
@@ -136,5 +180,72 @@ body {
 }
 
 .content {
-    flex-grow: 1;
+    flex: 1;
+}
+
+/* Fix layout for 4 cars per row */
+.fleet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Align content and footer properly on all pages */
+.page-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.page-footer {
+    margin-top: auto;
+}
+
+/* Overview Page */
+.overview-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.primary-logo {
+    max-width: 150px;
+    max-height: 150px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Title Styling */
+h1, h2, h3 {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* General links */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
+}
+
+/* FAQ Section */
+.faq-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.faq-question {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.faq-answer {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
 }
