@@ -1,25 +1,37 @@
-/* General Topbar and Footer Styles */
+body, html { 
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+/* Topbar */
 .topbar {
-    background-color: #003366;
-    padding: 15px;
-    text-align: center;
+    background-color: #808080; /* Grey background */
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
-.topbar .topbar-logo {
-    max-width: 100px; /* Resize logo for appropriate size */
-    height: auto;
+.topbar-logo {
+    max-width: 100px; /* Reduced image size */
+    max-height: 50px; /* Reduced image size */
+    margin-left: 20px; /* Positioning the logo to the left */
 }
 
+/* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
+    flex: 1;
 }
 
 .nav-links a {
@@ -27,71 +39,81 @@
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-    font-size: 14px;
+    text-transform: uppercase;
 }
 
 .nav-links a:hover {
-    color: grey;
+    text-decoration: underline;
+    color: grey; /* Grey hover effect */
+}
+
+/* Content Section */
+.content {
+    flex: 1;
+    padding: 20px;
 }
 
 /* Footer */
 .footer {
-    background-color: #003366;
+    background-color: #808080; /* Grey background */
     color: white;
     text-align: center;
     padding: 10px 0;
     position: relative;
     width: 100%;
+    bottom: 0;
     margin-top: auto;
 }
 
-/* Medic of the Week Page */
+/* Medic of the Week */
 .medic-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
-    gap: 20px;
+    padding: 20px;
 }
 
 .medic-card {
-    padding: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 80%;
     text-align: center;
-    transition: background-color 0.3s, transform 0.3s;
-    width: 300px;
+    transition: background-color 0.3s, transform 0.3s ease;
 }
 
 .medic-card:hover {
-    background-color: gold;
-    transform: scale(1.05);
+    background-color: #ffd700; /* Gold hover effect */
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
-/* Top Five Hours Page */
+/* Top Five Hours */
 .top-five-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
-    gap: 20px;
+    padding: 20px;
 }
 
 .top-five-card {
-    padding: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 80%;
     text-align: center;
-    transition: background-color 0.3s, transform 0.3s;
-    width: 300px;
+    transition: background-color 0.3s, transform 0.3s ease;
 }
 
 .top-five-card:hover {
-    background-color: gold;
-    transform: scale(1.05);
+    background-color: #ffd700; /* Gold hover effect */
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
-/* Car Fleet Page Grid Layout */
+/* Car Fleet */
 .fleet-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -99,37 +121,28 @@
     padding: 20px;
 }
 
-.fleet-item img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
 .fleet-item {
     text-align: center;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .fleet-item:hover {
     background-color: #e0f7fa; /* Blue hover effect */
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
-/* Miscellaneous Styling */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.fleet-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
-/* Ensure footer is always at the bottom */
-main {
-    flex: 1;
+/* Footer Adjustment */
+.footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }
