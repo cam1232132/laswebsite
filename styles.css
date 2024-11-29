@@ -12,8 +12,8 @@ body {
 
 /* Primary Logo */
 .primary-logo {
-    max-width: 120px; /* Adjusted smaller size for images */
-    max-height: 120px; /* Adjusted smaller size for images */
+    max-width: 120px; /* Adjusted size for image */
+    max-height: 120px; /* Adjusted size for image */
     display: block;
     margin: 0;
 }
@@ -21,7 +21,7 @@ body {
 /* Topbar */
 .topbar {
     background-color: #003366; /* Darker blue */
-    padding: 30px; /* Increased size of topbar to be larger than the image */
+    padding: 40px 0; /* Increased size of topbar by 10px */
     text-align: center;
     position: relative;
 }
@@ -29,7 +29,7 @@ body {
 /* Links in the Topbar */
 .nav-links {
     position: absolute;
-    bottom: 10px; /* Ensure links are at the bottom of the topbar */
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -65,7 +65,7 @@ body {
 /* Car Fleet Page */
 .fleet-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 cars per row */
     gap: 20px;
     padding: 20px;
 }
@@ -86,60 +86,8 @@ body {
 }
 
 .fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover */
-    transform: scale(1.05); /* Slight zoom */
-}
-
-/* FAQ Page */
-.faq-container {
-    margin: 20px;
-}
-
-/* FAQ Links */
-.faq-link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 15px;
-}
-
-.faq-link:hover {
-    color: #999999;
-}
-
-/* Medic of the Week Page */
-.medic-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.medic-item {
-    background-color: #fff;
-    border: 2px solid #003366;
-    border-radius: 8px;
-    padding: 15px;
-    width: 30%;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.medic-item:hover {
     background-color: #FFD700; /* Golden hover effect */
     transform: scale(1.05);
-}
-
-.medic-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-.medic-item p {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white; /* Make titles white */
 }
 
 /* Top Five Hours Page */
@@ -175,7 +123,7 @@ body {
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
-    color: white; /* Make titles white */
+    color: black; /* Make text black for names, ranks, and hours */
 }
 
 /* Adjust footer on all pages to be fixed at bottom */
@@ -187,4 +135,39 @@ body {
 
 footer {
     margin-top: auto;
+}
+
+/* Medic of the Week Page */
+.medic-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.medic-item {
+    background-color: #fff;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    padding: 15px;
+    width: 30%;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.medic-item:hover {
+    background-color: #FFD700; /* Golden hover effect */
+    transform: scale(1.05);
+}
+
+.medic-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.medic-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
 }
