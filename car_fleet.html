@@ -1,141 +1,57 @@
-/* General Styles for All Pages */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures footer stays at the bottom */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Fleet | LDN Ambulance Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-h2 {
-    font-size: 2rem;
-    color: #333;
-    text-align: center;
-    margin-top: 20px;
-}
+    <!-- Topbar -->
+    <div class="topbar">
+        <img src="Images/LAS_primary.png" alt="LDN Ambulance Service Logo" class="primary-logo">
+        <div class="nav-links">
+            <a href="overview.html">Overview</a>
+            <a href="medic_of_the_week.html">Medic of the Week</a>
+            <a href="car_fleet.html">Car Fleet</a>
+        </div>
+    </div>
 
-p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-}
+    <!-- Content -->
+    <div class="content">
+        <h2>Car Fleet</h2>
+        <p>Explore the vehicles used by the LDN Ambulance Service for swift and efficient response.</p>
+        
+        <div class="fleet-container">
+            <!-- Individual Fleet Items -->
+            <div class="fleet-item">
+                <img src="Images/car1.png" alt="Ambulance 1">
+                <h3>Ambulance 1</h3>
+                <p>Equipped with advanced life support systems.</p>
+            </div>
+            <div class="fleet-item">
+                <img src="Images/car2.png" alt="Ambulance 2">
+                <h3>Ambulance 2</h3>
+                <p>Specialized for rapid response in urban areas.</p>
+            </div>
+            <div class="fleet-item">
+                <img src="Images/car3.png" alt="Ambulance 3">
+                <h3>Ambulance 3</h3>
+                <p>Designed for patient comfort and care.</p>
+            </div>
+            <div class="fleet-item">
+                <img src="Images/car4.png" alt="Ambulance 4">
+                <h3>Ambulance 4</h3>
+                <p>Optimized for rural operations.</p>
+            </div>
+        </div>
+    </div>
 
-/* Topbar */
-.topbar {
-    background-color: #0056b3; /* Blue color */
-    padding: 10px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    position: relative;
-    height: 60px;
-}
+    <!-- Footer -->
+    <div class="footer">
+        <p>LDN Ambulance Service | Website created by Cameron Hall, Deputy Chief Ambulance Officer</p>
+    </div>
 
-/* Primary Logo in Top Left */
-.primary-logo {
-    max-width: 80px; /* Resized to 80px */
-    height: auto;
-    position: relative;
-}
-
-/* Navigation Links in Topbar (Bottom of Topbar) */
-.nav-links {
-    margin-top: auto;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-/* Content Section */
-.content {
-    flex: 1;
-    padding: 20px;
-}
-
-/* Car Fleet Section */
-.fleet-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 20px;
-    padding: 20px;
-}
-
-.fleet-item {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover effect */
-    transform: scale(1.05); /* Slight zoom effect */
-}
-
-.fleet-item img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-}
-
-.fleet-item h3 {
-    margin: 10px 0;
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.fleet-item p {
-    margin: 0 10px 15px;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-/* Footer Styles */
-.footer {
-    background-color: #0056b3; /* Blue color */
-    color: white; /* Footer text color */
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    margin-top: auto; /* Ensures footer is at the bottom */
-}
-
-.footer p {
-    margin: 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .topbar {
-        flex-direction: column;
-        height: auto;
-        text-align: center;
-    }
-
-    .nav-links {
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .fleet-container {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-}
+</body>
+</html>
