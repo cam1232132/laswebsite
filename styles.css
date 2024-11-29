@@ -1,41 +1,39 @@
-/* General Body Styling */
-body, html { 
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif;
 }
 
-/* Topbar and Footer */
-.topbar, .footer {
-    background-color: #007BFF; /* Blue color */
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-}
-
-/* Logo in Topbar */
+/* Primary Logo */
 .primary-logo {
-    max-width: 120px; /* Adjust logo size */
-    max-height: 120px;
-    display: inline-block;
-    margin-right: 20px;
-}
-
-/* Title in Topbar */
-.topbar-title {
-    font-size: 24px;
-    font-weight: bold;
+    max-width: 120px; /* Adjusted smaller size for images */
+    max-height: 120px; /* Adjusted smaller size for images */
+    display: block;
     margin: 0;
 }
 
-/* Navigation Links */
+/* Topbar */
+.topbar {
+    background-color: #003366; /* Darker blue */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Links */
+.nav-links {
+    position: absolute;
+    bottom: 10px; /* Ensure links are at the bottom of the topbar */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -44,16 +42,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: grey;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    margin-top: auto;
+    color: #999999; /* Grey on hover */
 }
 
 /* Content Section */
@@ -62,9 +51,15 @@ body {
     padding: 20px;
 }
 
-/* Overview Section */
-.overview-section {
-    margin-bottom: 20px;
+/* Footer */
+.footer {
+    background-color: #003366; /* Darker blue */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Car Fleet Page */
@@ -95,47 +90,106 @@ body {
     transform: scale(1.05); /* Slight zoom */
 }
 
-/* Medic of the Week */
+/* Car Fleet Descriptions */
+.fleet-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* FAQ Page */
+.faq-container {
+    margin: 20px;
+}
+
+/* FAQ Links */
+.faq-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.faq-link:hover {
+    color: #999999;
+}
+
+/* Medic of the Week Page */
 .medic-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-.medic-container .medic-box {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
+.medic-item {
+    background-color: #fff;
+    border: 2px solid #003366;
     border-radius: 8px;
-    padding: 20px;
-    width: 80%;
-    max-width: 300px;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
+    padding: 15px;
+    width: 30%;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.medic-container .medic-box:hover {
-    background-color: gold; /* Golden hover effect */
+.medic-item:hover {
+    background-color: #FFD700; /* Golden hover effect */
+    transform: scale(1.05);
 }
 
-/* Top Five Hours */
+.medic-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.medic-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Top Five Hours Page */
 .top-five-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.top-five-container .top-five-box {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
+.top-five-item {
+    background-color: #fff;
+    border: 2px solid #003366;
     border-radius: 8px;
-    padding: 20px;
-    width: 80%;
-    max-width: 300px;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
+    padding: 15px;
+    width: 30%;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.top-five-container .top-five-box:hover {
-    background-color: gold; /* Golden hover effect */
+.top-five-item:hover {
+    background-color: #FFD700; /* Golden hover effect */
+    transform: scale(1.05);
+}
+
+.top-five-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.top-five-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Adjust footer on all pages to be fixed at bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+footer {
+    margin-top: auto;
 }
