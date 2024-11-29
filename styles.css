@@ -1,144 +1,96 @@
-/* Global Styles */
-body, html { 
+/* Reset default margins and padding */
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
+    box-sizing: border-box;
 }
 
+/* Body and page setup */
 body {
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
+    height: 100%;
 }
 
 /* Topbar */
 .topbar {
-    background-color: #808080; /* Grey background */
-    padding: 10px 0;
+    background-color: white;
+    padding: 10px 20px;
+    text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
 }
 
 .topbar-logo {
-    max-width: 100px; /* Reduced image size */
-    max-height: 50px; /* Reduced image size */
-    margin-left: 20px; /* Positioning the logo to the left */
+    max-width: 150px;
+    max-height: 50px;
+    display: block;
+    margin: 0;
 }
 
 .nav-links {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
+    gap: 20px;
 }
 
 .nav-links a {
-    color: white;
+    color: black;
     text-decoration: none;
-    margin: 0 15px;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
-    color: grey; /* Grey hover effect */
+    color: grey;
 }
 
-/* Content Section */
+/* Content */
 .content {
-    flex: 1;
+    padding-top: 80px; /* Adjusted for fixed topbar */
     padding: 20px;
+    flex-grow: 1;
 }
 
-/* Page Titles */
+/* Top Five Hours Section */
 .page-title {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-/* Fleet Section */
-.fleet-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.fleet-item {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover effect */
-    transform: scale(1.05); /* Slight zoom effect */
-}
-
-.fleet-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-/* Medic of the Week */
-.medic-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-}
-
-.medic-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    width: 30%;
-}
-
-.medic-item:hover {
-    background-color: #ffeb3b; /* Golden hover effect */
-}
-
-.medic-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.medic-item h3 {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-/* Top Five Hours */
 .top-five-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
     padding: 20px;
 }
 
 .top-five-item {
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 10px;
-    text-align: center;
     background-color: #f5f5f5;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .top-five-item:hover {
     background-color: #ffeb3b; /* Golden hover effect */
+}
+
+.top-five-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.top-five-item p {
+    font-size: 1rem;
+    margin: 5px 0;
 }
 
 /* Footer */
@@ -153,72 +105,17 @@ body {
     margin-top: auto;
 }
 
-/* Links Container (for page links) */
-.links-container {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.links-container a {
-    margin: 0 15px;
-    text-decoration: none;
+/* Navigation links on all pages */
+.nav-links a {
     color: white;
     font-weight: bold;
 }
 
-.links-container a:hover {
-    color: grey; /* Grey hover effect */
+.nav-links a:hover {
+    color: grey;
 }
 
-/* Overview Page Footer Gap Fix */
-.overview-footer {
-    margin-top: 20px; /* Adjust this if you want to reduce the gap between content and footer */
-}
-
-/* FAQ Section (No Golden Hover Effect) */
-.faq-container {
-    padding: 20px;
-}
-
-.faq-item {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    background-color: #f5f5f5;
-}
-
-.faq-item h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.faq-item p {
-    font-size: 1rem;
-}
-
-/* Responsive Media Queries */
-@media (max-width: 768px) {
-    .fleet-container {
-        grid-template-columns: 1fr 1fr; /* 2 items per row on smaller screens */
-    }
-
-    .medic-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .medic-item {
-        width: 80%; /* Wider containers on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-links {
-        flex-direction: column;
-    }
-
-    .nav-links a {
-        margin: 10px 0;
-    }
+/* Adjust the gap between content and footer if needed */
+.content {
+    margin-bottom: 60px; /* Ensures footer is at the bottom */
 }
