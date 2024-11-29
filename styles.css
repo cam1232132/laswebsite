@@ -48,11 +48,30 @@ img {
 }
 
 .primary-logo {
-    max-width: 120px; /* Adjusted size of logo */
+    max-width: 100px; /* Reduced size for fitting in the topbar */
     height: auto;
     position: absolute;
     left: 15px;
     top: 10px;
+}
+
+/* Navigation Links in Topbar */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    background-color: #0056b3;
+    padding: 10px 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
 }
 
 /* Footer Styles */
@@ -63,6 +82,7 @@ img {
     padding: 10px 0;
     position: relative;
     width: 100%;
+    margin-top: auto; /* Ensures footer is at the bottom */
 }
 
 .footer p {
@@ -108,28 +128,20 @@ img {
     text-align: center;
 }
 
-/* Navigation Links */
-.nav-links {
-    display: flex;
-    justify-content: center;
-    background-color: #0056b3;
-    padding: 10px 0;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
 /* Spacing between "What is LAS?" and "What is this website for?" */
 .question-container .question-item {
     margin-bottom: 40px; /* Adding more space between questions */
+}
+
+/* Footer position at the bottom, no matter how much content */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
 }
 
 /* Responsive Design for Overview Page */
