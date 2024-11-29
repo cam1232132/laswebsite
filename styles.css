@@ -19,7 +19,7 @@ body {
 
 /* Topbar */
 .topbar {
-    background-color: #007BFF; /* Blue color for topbar */
+    background-color: #0056b3; /* Blue color for topbar */
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -32,14 +32,14 @@ body {
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    height: 50px; /* Adjust the size of the logo */
+    height: 60px; /* Adjust the size of the logo to be consistent with other pages */
 }
 
 /* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #007BFF; /* Blue background */
+    background-color: #0056b3; /* Blue background */
     padding: 10px 0;
 }
 
@@ -62,7 +62,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #007BFF; /* Blue color for footer */
+    background-color: #0056b3; /* Blue color for footer */
     color: white;
     text-align: center;
     padding: 10px 0;
