@@ -1,64 +1,85 @@
-/* Car Fleet Page */
-.fleet-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-    grid-auto-rows: auto; /* Allow containers to grow based on content */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Fleet - LDN Ambulance Service</title>
+    <link rel="stylesheet" href="path-to-your-stylesheet.css"> <!-- Ensure this links to your CSS file -->
+</head>
+<body>
+    <header class="topbar">
+        <h1>LDN Ambulance Service - Car Fleet</h1>
+    </header>
 
-.fleet-item {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
+    <div class="content">
+        <section class="fleet-container">
+            <!-- Fleet Item 1 -->
+            <div class="fleet-item">
+                <img src="Images/fiat-ducato.jpg" alt="Fiat-Ducato">
+                <h3>Paramedic - Fiat-Ducato</h3>
+                <p><strong>Top Speed:</strong> 92 Mph / 148 km/h</p>
+            </div>
 
-.fleet-item:hover {
-    transform: scale(1.05); /* Slight zoom */
-    background-color: #e0f7fa; /* Blue hover effect */
-}
+            <!-- Fleet Item 2 -->
+            <div class="fleet-item">
+                <img src="Images/mercedes-a45.jpg" alt="Mercedes-AMG A45">
+                <h3>Paramedic - A45</h3>
+                <p><strong>Top Speed:</strong> 168 mph</p>
+                <p>The Mercedes-AMG A45 has a top speed of 168 mph, 0 to 62 mph in 3.9 seconds, with a 2.0-liter, 4-cylinder turbo engine producing 415 horsepower.</p>
+            </div>
 
-.fleet-item img {
-    width: 100%;
-    height: 150px; /* Limit image height */
-    object-fit: contain;
-    margin-bottom: 15px;
-}
+            <!-- Fleet Item 3 -->
+            <div class="fleet-item">
+                <img src="Images/cupra-formentor.jpg" alt="Cupra Formentor">
+                <h3>Advanced Paramedic - Cupra Formentor Custom</h3>
+                <p><strong>Acceleration:</strong> 0-62 mph in 4.9 seconds</p>
+                <p>The flagship model delivers high-performance thanks to the 2.0-litre TSI 310PS 4Drive engine, with LED headlights and leather steering wheel as standard.</p>
+            </div>
 
-.fleet-item h3 {
-    font-size: 18px;
-    color: #333;
-    margin: 10px 0;
-}
+            <!-- Fleet Item 4 -->
+            <div class="fleet-item">
+                <img src="Images/c63s-csl.jpg" alt="C63s CSL">
+                <h3>Doctor - C63s CSL</h3>
+                <p><strong>Power:</strong> 375 kW and 700Nm of torque</p>
+                <p>This powerful V8 accelerates from 0-100 km/h in 4.0 seconds, with a fuel economy of just 8.6 litres per 100km.</p>
+            </div>
 
-.fleet-item p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.5;
-    margin-top: 10px;
-    flex-grow: 1; /* Ensure the description takes available space */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 5; /* Allow up to 5 lines for the description */
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-}
+            <!-- Fleet Item 5 -->
+            <div class="fleet-item">
+                <img src="Images/rs6.jpg" alt="RS6">
+                <h3>Human Resources - RS6</h3>
+                <p><strong>Acceleration:</strong> 0-62 mph in 3.4 seconds</p>
+                <p>With a torque of 850 Nm, this vehicle provides impressive performance and speed.</p>
+            </div>
 
-/* To ensure the footer is at the bottom of the page */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+            <!-- Fleet Item 6 -->
+            <div class="fleet-item">
+                <img src="Images/rs7.jpg" alt="RS7">
+                <h3>Directors - RS7</h3>
+                <p><strong>Torque:</strong> 850 Nm</p>
+                <p>The RS 7 performance combines a stylish design with the brute force of the V8 TFSI quattro engine for amazing acceleration.</p>
+            </div>
 
-.content {
-    flex: 1;
-}
+            <!-- Fleet Item 7 -->
+            <div class="fleet-item">
+                <img src="Images/rsq8.jpg" alt="RSQ8">
+                <h3>Chief Ambulance Officer - RSQ8</h3>
+                <p><strong>0-62 mph:</strong> in 3.8 seconds</p>
+                <p>With 600 PS of power, this powerful SUV coupé from Audi Sport offers an extraordinary driving experience.</p>
+            </div>
+
+            <!-- Fleet Item 8 -->
+            <div class="fleet-item">
+                <img src="Images/gle900.jpg" alt="GLE 900">
+                <h3>Chief Executive Officer - GLE 900</h3>
+                <p><strong>Power:</strong> 662 kW / 900 hp</p>
+                <p>This powerhouse accelerates from 0-100 km/h in just 3.2 seconds, with a top speed of 330 km/h.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 LDN Ambulance Service. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
