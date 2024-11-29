@@ -26,13 +26,20 @@ body {
     position: relative;
 }
 
-/* LAS Logo in Top Left */
 .topbar img {
     position: absolute;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    height: 60px; /* Adjust the size of the logo to be consistent with other pages */
+    height: 60px; /* Adjust the size of the logo */
+}
+
+/* Title in the Center */
+.topbar h1 {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 auto;
+    display: inline-block;
 }
 
 /* Navigation Links */
