@@ -35,24 +35,27 @@ img {
 /* Topbar */
 .topbar {
     background-color: #0056b3; /* Blue color */
-    padding: 15px 0;
+    padding: 25px 0; /* Increased padding to 25px for top and bottom */
     text-align: center;
     color: white;
     position: relative;
+    height: 90px; /* Height adjusted to 90px */
 }
 
+.primary-logo {
+    max-width: 80px; /* Reduced size for fitting in the topbar */
+    height: auto;
+    position: absolute;
+    left: 15px;
+    top: 5px; /* Adjusted top position for better centering within the topbar */
+}
+
+/* Title in Topbar */
 .topbar h1 {
     margin: 0;
     font-size: 24px;
     text-align: center;
-}
-
-.primary-logo {
-    max-width: 80px; /* Adjusted size for better fitting in the topbar */
-    height: auto;
-    position: absolute;
-    left: 15px;
-    top: 10px;
+    line-height: 90px; /* Vertically center the title */
 }
 
 /* Navigation Links in Topbar */
