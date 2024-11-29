@@ -1,11 +1,11 @@
-/* General Styles for All Pages */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures footer stays at the bottom */
+    min-height: 100vh;
 }
 
 h2 {
@@ -26,33 +26,43 @@ p {
     background-color: #0056b3; /* Blue color */
     padding: 10px 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     color: white;
     position: relative;
     height: 80px; /* Adjusted to fit logo */
 }
 
-/* Primary Logo in Top Left */
 .primary-logo {
-    max-width: 80px; /* Resized to 80px */
+    max-width: 80px;
     height: auto;
-    position: relative;
+    position: absolute;
+    left: 15px; /* Position logo in the top-left corner */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-/* Navigation Links in Topbar (Bottom of Topbar) */
+/* Centered Title */
+.topbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+/* Links Centered at the Bottom */
 .nav-links {
     margin-top: auto;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 10px; /* Positioned at the bottom of the topbar */
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
     font-weight: bold;
 }
 
@@ -60,16 +70,10 @@ p {
     text-decoration: underline;
 }
 
-/* Content Section */
-.content {
-    flex: 1;
-    padding: 20px;
-}
-
 /* Car Fleet Section */
 .fleet-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
     gap: 20px;
     padding: 20px;
 }
@@ -107,15 +111,15 @@ p {
     font-size: 0.9rem;
 }
 
-/* Footer Styles */
+/* Footer */
 .footer {
     background-color: #0056b3; /* Blue color */
-    color: white; /* Footer text color */
+    color: white;
     text-align: center;
     padding: 10px 0;
     position: relative;
     width: 100%;
-    margin-top: auto; /* Ensures footer is at the bottom */
+    margin-top: auto;
 }
 
 .footer p {
@@ -125,14 +129,7 @@ p {
 /* Responsive Design */
 @media (max-width: 768px) {
     .topbar {
-        flex-direction: column;
         height: auto;
-        text-align: center;
-    }
-
-    .nav-links {
-        justify-content: center;
-        margin-top: 10px;
     }
 
     .fleet-container {
