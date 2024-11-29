@@ -1,3 +1,4 @@
+/* Global Styles */
 body, html { 
     margin: 0;
     padding: 0;
@@ -26,7 +27,6 @@ body {
     margin-left: 20px; /* Positioning the logo to the left */
 }
 
-/* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: center;
@@ -53,67 +53,14 @@ body {
     padding: 20px;
 }
 
-/* Footer */
-.footer {
-    background-color: #808080; /* Grey background */
-    color: white;
+/* Page Titles */
+.page-title {
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    margin-top: auto;
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
 
-/* Medic of the Week */
-.medic-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.medic-card {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    width: 80%;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.3s ease;
-}
-
-.medic-card:hover {
-    background-color: #ffd700; /* Gold hover effect */
-    transform: scale(1.05); /* Slight zoom effect */
-}
-
-/* Top Five Hours */
-.top-five-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.top-five-card {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    width: 80%;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.3s ease;
-}
-
-.top-five-card:hover {
-    background-color: #ffd700; /* Gold hover effect */
-    transform: scale(1.05); /* Slight zoom effect */
-}
-
-/* Car Fleet */
+/* Fleet Section */
 .fleet-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -140,9 +87,138 @@ body {
     border-radius: 5px;
 }
 
-/* Footer Adjustment */
+/* Medic of the Week */
+.medic-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.medic-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 30%;
+}
+
+.medic-item:hover {
+    background-color: #ffeb3b; /* Golden hover effect */
+}
+
+.medic-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.medic-item h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Top Five Hours */
+.top-five-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.top-five-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.top-five-item:hover {
+    background-color: #ffeb3b; /* Golden hover effect */
+}
+
+/* Footer */
 .footer {
+    background-color: #808080; /* Grey background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
     position: relative;
     width: 100%;
     bottom: 0;
+    margin-top: auto;
+}
+
+/* Links Container (for page links) */
+.links-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.links-container a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.links-container a:hover {
+    color: grey; /* Grey hover effect */
+}
+
+/* Overview Page Footer Gap Fix */
+.overview-footer {
+    margin-top: 20px; /* Adjust this if you want to reduce the gap between content and footer */
+}
+
+/* FAQ Section (No Golden Hover Effect) */
+.faq-container {
+    padding: 20px;
+}
+
+.faq-item {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #f5f5f5;
+}
+
+.faq-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .fleet-container {
+        grid-template-columns: 1fr 1fr; /* 2 items per row on smaller screens */
+    }
+
+    .medic-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .medic-item {
+        width: 80%; /* Wider containers on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
 }
