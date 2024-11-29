@@ -12,21 +12,20 @@ body {
 
 /* Primary Logo */
 .primary-logo {
-    max-width: 120px; /* Adjusted size for image */
-    max-height: 120px; /* Adjusted size for image */
+    max-width: 120px;
+    max-height: 120px;
     display: block;
     margin: 0;
 }
 
 /* Topbar */
 .topbar {
-    background-color: #003366; /* Darker blue */
-    padding: 40px 0; /* Increased size of topbar by 10px */
+    background-color: #003366; /* Dark blue */
+    padding: 50px 0; /* Increased size of topbar by 10px */
     text-align: center;
     position: relative;
 }
 
-/* Links in the Topbar */
 .nav-links {
     position: absolute;
     bottom: 10px;
@@ -53,7 +52,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #003366; /* Darker blue */
+    background-color: #003366; /* Dark blue */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -68,6 +67,7 @@ body {
     grid-template-columns: repeat(4, 1fr); /* 4 cars per row */
     gap: 20px;
     padding: 20px;
+    margin-top: 20px; /* Added margin to top of fleet section */
 }
 
 .fleet-item img {
@@ -90,6 +90,11 @@ body {
     transform: scale(1.05);
 }
 
+.fleet-item h3 {
+    color: white;
+    margin-top: 10px;
+}
+
 /* Top Five Hours Page */
 .top-five-container {
     display: flex;
@@ -109,7 +114,7 @@ body {
 }
 
 .top-five-item:hover {
-    background-color: #FFD700; /* Golden hover effect */
+    background-color: #FFD700;
     transform: scale(1.05);
 }
 
@@ -123,18 +128,7 @@ body {
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
-    color: black; /* Make text black for names, ranks, and hours */
-}
-
-/* Adjust footer on all pages to be fixed at bottom */
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-footer {
-    margin-top: auto;
+    color: black;
 }
 
 /* Medic of the Week Page */
@@ -155,7 +149,7 @@ footer {
 }
 
 .medic-item:hover {
-    background-color: #FFD700; /* Golden hover effect */
+    background-color: #FFD700;
     transform: scale(1.05);
 }
 
@@ -171,3 +165,4 @@ footer {
     font-weight: bold;
     color: white;
 }
+
