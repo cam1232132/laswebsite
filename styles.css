@@ -27,6 +27,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-left: 20px;
+    position: relative;
 }
 
 h1 {
@@ -35,9 +36,16 @@ h1 {
     flex: 1;
 }
 
+nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 nav a {
     color: white;
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
 }
@@ -57,6 +65,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-top: 20px;
 }
 
 .medic-card {
@@ -98,10 +107,50 @@ nav a:hover {
     padding: 10px;
     position: relative;
     width: 100%;
+    margin-top: auto;
 }
 
 .footer p {
     margin: 0;
+}
+
+/* Top Five Hours Section */
+.top-five-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.top-five-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.top-five-card h3 {
+    margin: 0;
+}
+
+.top-five-card p {
+    margin: 5px 0;
+}
+
+.top-five-card:hover {
+    transform: scale(1.05);
+    background-color: #ffd700; /* Golden hover effect */
+}
+
+.top-five-card.current {
+    background-color: #ffd700; /* Gold background for current medic */
+}
+
+.top-five-card.previous {
+    background-color: #e0e0e0;
 }
 
 /* Fleet Page Fixes */
@@ -172,6 +221,15 @@ nav a:hover {
         width: 90%; /* Adjust width for mobile */
     }
     
+    .top-five-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-five-card {
+        width: 90%; /* Adjust width for mobile */
+    }
+
     .fleet-container {
         grid-template-columns: 1fr 1fr; /* Adjust for smaller screens */
     }
