@@ -19,17 +19,27 @@ body {
 
 /* Topbar */
 .topbar {
-    background-color: #808080; /* Grey background */
+    background-color: #007BFF; /* Blue color for topbar */
     color: white;
     padding: 10px 0;
     text-align: center;
+    position: relative;
+}
+
+/* LAS Logo in Top Left */
+.topbar img {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px; /* Adjust the size of the logo */
 }
 
 /* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #808080;
+    background-color: #007BFF; /* Blue background */
     padding: 10px 0;
 }
 
@@ -52,7 +62,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #808080;
+    background-color: #007BFF; /* Blue color for footer */
     color: white;
     text-align: center;
     padding: 10px 0;
