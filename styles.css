@@ -47,7 +47,8 @@ img {
     height: auto;
     position: absolute;
     left: 15px;
-    top: 5px; /* Adjusted top position for better centering within the topbar */
+    top: 50%; /* Vertically center the logo */
+    transform: translateY(-50%);
 }
 
 /* Title in Topbar */
