@@ -1,56 +1,35 @@
-body, html { 
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
     font-family: Arial, sans-serif;
-}
-
-/* Primary Logo */
-.primary-logo {
-    max-width: 150px;
-    max-height: 150px;
-    display: block;
-    margin: 0 auto;
 }
 
 /* Topbar */
 .topbar {
-    background-color: #003366; /* Dark blue background */
-    color: white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
+    background-color: #003366;
+    padding: 15px 0;
     position: relative;
-}
-
-h1 {
-    margin: 0;
     text-align: center;
-    flex: 1;
+    width: 100%;
 }
 
-nav {
+/* Navigation Links */
+.topbar nav {
     position: absolute;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
 }
 
-nav a {
+.topbar nav a {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
+    margin: 0 20px;
     font-weight: bold;
+    font-size: 16px;
 }
 
-nav a:hover {
+.topbar nav a:hover {
     color: grey;
 }
 
@@ -60,7 +39,7 @@ nav a:hover {
     padding: 20px;
 }
 
-/* Medic of the Week Section */
+/* Medic of the Week Containers */
 .medic-container {
     display: flex;
     justify-content: center;
@@ -69,21 +48,21 @@ nav a:hover {
 }
 
 .medic-card {
-    background-color: #f0f0f0;
+    background-color: #f8f8f8;
     padding: 20px;
-    text-align: center;
     border-radius: 10px;
+    text-align: center;
     width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, background-color 0.3s;
+    border: 2px solid #ccc;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .medic-card h3 {
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 .medic-card p {
-    margin: 5px 0;
+    font-size: 14px;
 }
 
 .medic-card:hover {
@@ -91,30 +70,7 @@ nav a:hover {
     background-color: #ffd700; /* Golden hover effect */
 }
 
-.medic-card.current {
-    background-color: #ffd700; /* Gold background for current medic */
-}
-
-.medic-card.previous {
-    background-color: #e0e0e0;
-}
-
-/* Footer */
-.footer {
-    background-color: #003366; /* Dark blue background */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    width: 100%;
-    margin-top: auto;
-}
-
-.footer p {
-    margin: 0;
-}
-
-/* Top Five Hours Section */
+/* Top Five Hours Containers */
 .top-five-container {
     display: flex;
     justify-content: center;
@@ -123,21 +79,21 @@ nav a:hover {
 }
 
 .top-five-card {
-    background-color: #f0f0f0;
+    background-color: #f8f8f8;
     padding: 20px;
-    text-align: center;
     border-radius: 10px;
+    text-align: center;
     width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, background-color 0.3s;
+    border: 2px solid #ccc;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .top-five-card h3 {
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 .top-five-card p {
-    margin: 5px 0;
+    font-size: 14px;
 }
 
 .top-five-card:hover {
@@ -145,96 +101,31 @@ nav a:hover {
     background-color: #ffd700; /* Golden hover effect */
 }
 
-.top-five-card.current {
-    background-color: #ffd700; /* Gold background for current medic */
-}
-
-.top-five-card.previous {
-    background-color: #e0e0e0;
-}
-
-/* Fleet Page Fixes */
-.fleet-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.fleet-item img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.fleet-item {
+/* Footer */
+.footer {
+    background-color: #003366;
+    color: white;
     text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
 }
 
-.fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover */
-    transform: scale(1.05); /* Slight zoom */
+/* FAQ Page: Remove Golden Hover Effect */
+.faq-container .faq-item:hover {
+    background-color: transparent; /* No hover effect */
 }
 
-/* FAQ Page Styles */
-.faq-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-}
-
-.faq-item {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.faq-item h3 {
-    margin: 0;
-    font-size: 18px;
-}
-
-.faq-item p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-.faq-item:hover {
-    background-color: #ffd700;
-}
-
-/* Responsive Design Adjustments */
+/* Media Query for Mobile Responsiveness */
 @media (max-width: 768px) {
-    .medic-container {
+    .topbar nav {
+        position: static;
+        margin-top: 10px;
+    }
+    .medic-container, .top-five-container {
         flex-direction: column;
-        align-items: center;
-    }
-    
-    .medic-card {
-        width: 90%; /* Adjust width for mobile */
-    }
-    
-    .top-five-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .top-five-card {
-        width: 90%; /* Adjust width for mobile */
-    }
-
-    .fleet-container {
-        grid-template-columns: 1fr 1fr; /* Adjust for smaller screens */
-    }
-    
-    .fleet-item {
-        width: 90%; /* Adjust item width */
+        gap: 15px;
     }
 }
