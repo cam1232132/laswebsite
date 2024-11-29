@@ -1,75 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LDN Ambulance Service - Car Fleet</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Topbar -->
-    <header class="topbar">
-        <img src="Images/LAS_primary.png" alt="LDN Ambulance Service Logo">
-        <h1>Car Fleet</h1>
-        <nav class="nav-links">
-            <a href="overview.html">Overview</a>
-            <a href="medic_of_the_week.html">Medic of the Week</a>
-            <a href="top_five_hours.html">Top 5 Hours</a>
-            <a href="car_fleet.html">Car Fleet</a>
-            <a href="about.html">About</a>
-        </nav>
-    </header>
+/* General Styles for All Pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
+}
 
-    <!-- Content -->
-    <div class="content">
-        <h1>LDN Ambulance Service - Car Fleet</h1>
-        <div class="fleet-container">
-            <div class="fleet-item">
-                <img src="Images/fiat ducato.png" alt="Fiat Ducato">
-                <h3>Paramedic - Fiat Ducato</h3>
-                <p>Top Speed: 92 Mph / 148 km/h</p>
-            </div>
-            <div class="fleet-item">
-                <img src="Images/a45.png" alt="Mercedes-AMG A45">
-                <h3>Paramedic - A45</h3>
-                <p>The Mercedes-AMG A45 has a top speed of 168 mph. 0 to 62 mph in 3.9 seconds. The A45 is a high-performance version of the A-Class hatchback with a 2.0-liter, 4-cylinder turbo engine that produces 415 horsepower and 369 lb-ft of torque. It also has an 8-speed dual-clutch transmission and all-wheel drive.</p>
-            </div>
-            <div class="fleet-item">
-                <img src="Images/CUPRA.png" alt="Cupra Formentor Custom">
-                <h3>Advanced Paramedic - Cupra Formentor Custom</h3>
-                <p>The new flagship model, which delivers high-performance thanks to the 2.0-litre TSI 310PS 4Drive engine, accelerates from 0-62mph in just 4.9 seconds. Digital Cockpit, LED headlights, and leather steering wheel as standard.</p>
-            </div>
-            <div class="fleet-item">
-                <img src="Images/C63.png" alt="C63s CSL">
-                <h3>Doctor - C63s CSL</h3>
-                <p>4.0-litre V8 to produce an incredible 375kW of power and 700Nm of torque, while pegging fuel economy to an unbelievable claim of 8.6 litres per 100km on the combined cycle. From 0-100km/h in 4.0 seconds.</p>
-            </div>
-            <div class="fleet-item">
-                <img src="Images/RS6.png" alt="RS6">
-                <h3>Human Resources - RS6</h3>
-                <p>Acceleration from (0–62 mph) 3.4 seconds. Torque 850 Nm.</p>
-            </div>
-            <div class="fleet-item">
-                <img src="Images/RS7.png" alt="RS7">
-                <h3>Directors - RS7</h3>
-                <p>With the RS 7 performance, you can have both. Coupé-like stylish design combined with the brute force of the V8 TFSI quattro engine mean compromise isn’t necessary. Acceleration from (0–62 mph) 3.4 seconds. Torque 850 Nm.</p>
-            </div>
-            <div class="fleet-item">
-                <img src="Images/RSQ8.png" alt="RSQ8">
-                <h3>Chief Ambulance Officer - RSQ8</h3>
-                <p>With 600 PS of power, the RS Q8 is the most powerful SUV coupé from Audi Sport. In addition to its RS performance, this impressive vehicle is extraordinary – both in its driving experience and in its design. 0-62mph in 3.8 seconds. System torque 800 Nm.</p>
-            </div>
-            <div class="fleet-item">
-                <img src="Images/GLE 900.png" alt="GLE 900">
-                <h3>Chief Executive Officer - GLE 900</h3>
-                <p>Power 662 kW / 900 hp | Torque 1250 Nm | 0-100 km/h 3.2 s | Vmax 330 km/h / 205 mph.</p>
-            </div>
-        </div>
-    </div>
+h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>LDN Ambulance Service | Website created by Cameron Hall Deputy Chief</p>
-    </footer>
-</body>
-</html>
+p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Topbar */
+.topbar {
+    background-color: #0056b3; /* Blue color */
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    position: relative;
+    height: 60px;
+}
+
+/* Primary Logo in Top Left */
+.primary-logo {
+    max-width: 80px; /* Resized to 80px */
+    height: auto;
+    position: relative;
+}
+
+/* Navigation Links in Topbar (Bottom of Topbar) */
+.nav-links {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Content Section */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Car Fleet Section */
+.fleet-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+}
+
+.fleet-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.fleet-item:hover {
+    background-color: #e0f7fa; /* Blue hover effect */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.fleet-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.fleet-item h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.fleet-item p {
+    margin: 0 10px 15px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #0056b3; /* Blue color */
+    color: white; /* Footer text color */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    margin-top: auto; /* Ensures footer is at the bottom */
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .topbar {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .fleet-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
