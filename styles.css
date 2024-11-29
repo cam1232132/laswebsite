@@ -48,7 +48,7 @@ img {
 }
 
 .primary-logo {
-    max-width: 100px; /* Reduced size for fitting in the topbar */
+    max-width: 80px; /* Adjusted size for better fitting in the topbar */
     height: auto;
     position: absolute;
     left: 15px;
