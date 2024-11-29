@@ -1,4 +1,4 @@
-/* General Styling */
+/* General Styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -9,14 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
-}
-
-/* Primary Logo */
-.primary-logo {
-    max-width: 150px;
-    max-height: 150px;
-    display: block;
-    margin: 0 auto;
+    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
 }
 
 /* Topbar */
@@ -47,7 +40,7 @@ body {
     grid-template-columns: repeat(4, 1fr); /* 4 cars per row */
     gap: 20px;
     padding: 20px;
-    grid-auto-rows: minmax(300px, auto); /* Ensure containers are big enough */
+    grid-auto-rows: minmax(350px, auto); /* Ensure the containers are big enough for content */
     margin: 0 auto;
     width: 90%; /* Limit container width for better alignment */
 }
@@ -93,7 +86,7 @@ body {
     flex-grow: 1;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 4; /* Limit description to 4 lines */
+    -webkit-line-clamp: 5; /* Limit description to 5 lines */
     -webkit-box-orient: vertical;
     display: -webkit-box;
 }
@@ -114,6 +107,17 @@ body {
     width: 100%;
     bottom: 0;
     margin-top: auto;
+}
+
+/* Ensure footer stays at the bottom of the page */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
 }
 
 /* Navigation Links */
@@ -181,73 +185,6 @@ body {
     min-height: 100vh;
 }
 
-.content {
-    flex: 1;
-}
-
-/* Fix layout for 4 cars per row */
-.fleet-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-/* Align content and footer properly on all pages */
-.page-content {
-    padding: 20px;
-    flex: 1;
-}
-
 .page-footer {
     margin-top: auto;
-}
-
-/* Overview Page */
-.overview-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.primary-logo {
-    max-width: 150px;
-    max-height: 150px;
-    display: block;
-    margin: 20px auto;
-}
-
-/* Title Styling */
-h1, h2, h3 {
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* General links */
-a {
-    color: white;
-    text-decoration: none;
-}
-
-a:hover {
-    color: grey;
-}
-
-/* FAQ Section */
-.faq-container {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-}
-
-.faq-question {
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-.faq-answer {
-    font-size: 14px;
-    color: #666;
-    margin-top: 5px;
 }
