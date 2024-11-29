@@ -1,47 +1,51 @@
+/* General Body Styling */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
     font-family: Arial, sans-serif;
 }
 
 /* Primary Logo */
 .primary-logo {
-    max-width: 120px;
-    max-height: 120px;
+    max-width: 150px;
+    max-height: 150px;
     display: block;
-    margin: 0;
+    margin: 0 auto;
 }
 
 /* Topbar */
 .topbar {
-    background-color: #003366; /* Dark blue */
-    padding: 50px 0; /* Increased size of topbar by 10px */
+    background-color: #0077b6; /* Darker Blue */
+    padding: 20px 0;
     text-align: center;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(150px + 10px); /* 10px bigger than the primary image */
 }
 
-.nav-links {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+.topbar img {
+    max-height: 150px;
+    max-width: 150px;
+    margin-left: 20px;
 }
 
-.nav-links a {
+.topbar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.topbar-links a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
     font-weight: bold;
 }
 
-.nav-links a:hover {
-    color: #999999; /* Grey on hover */
+.topbar-links a:hover {
+    color: #d9d9d9;
 }
 
 /* Content Section */
@@ -52,22 +56,21 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #003366; /* Dark blue */
+    background-color: #0077b6; /* Darker Blue */
     color: white;
     text-align: center;
     padding: 10px 0;
     position: relative;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
 }
 
-/* Car Fleet Page */
+/* Fleet Page Styling */
 .fleet-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 cars per row */
     gap: 20px;
     padding: 20px;
-    margin-top: 20px; /* Added margin to top of fleet section */
 }
 
 .fleet-item img {
@@ -86,83 +89,33 @@ body {
 }
 
 .fleet-item:hover {
-    background-color: #FFD700; /* Golden hover effect */
-    transform: scale(1.05);
+    background-color: #ffcc00; /* Yellow on hover */
+    transform: scale(1.05); /* Slight zoom */
 }
 
-.fleet-item h3 {
-    color: white;
-    margin-top: 10px;
-}
-
-/* Top Five Hours Page */
-.top-five-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.top-five-item {
-    background-color: #fff;
-    border: 2px solid #003366;
-    border-radius: 8px;
-    padding: 15px;
-    width: 30%;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.top-five-item:hover {
-    background-color: #FFD700;
-    transform: scale(1.05);
-}
-
-.top-five-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-.top-five-item p {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-}
-
-/* Medic of the Week Page */
+/* Medic of the Week Container */
 .medic-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    gap: 20px;
 }
 
-.medic-item {
-    background-color: #fff;
-    border: 2px solid #003366;
-    border-radius: 8px;
-    padding: 15px;
+.medic {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
     width: 30%;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-.medic-item:hover {
-    background-color: #FFD700;
-    transform: scale(1.05);
+.medic:hover {
+    background-color: #ffcc00; /* Yellow on hover */
 }
 
-.medic-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
+.medic-details p {
+    margin: 5px 0;
 }
 
-.medic-item p {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
+.medic h2 {
+    margin-top: 0;
 }
-
