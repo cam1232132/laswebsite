@@ -24,40 +24,45 @@ p {
 /* Topbar */
 .topbar {
     background-color: #0056b3; /* Blue color */
-    padding: 10px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    justify-content: space-between;
     position: relative;
-    height: 80px; /* Adjusted to fit logo */
+    height: 100px; /* Adjusted height */
+    padding: 0 15px;
+    color: white;
 }
 
 .primary-logo {
     max-width: 80px;
     height: auto;
     position: absolute;
-    left: 15px; /* Position logo in the top-left corner */
+    left: 15px; /* Positioned in top-left */
     top: 50%;
     transform: translateY(-50%);
 }
 
-/* Centered Title */
+/* Title Centered in the Topbar */
 .topbar-title {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* Links Centered at the Bottom */
+/* Links in Middle Bottom of Topbar */
 .nav-links {
-    margin-top: auto;
+    position: absolute;
+    bottom: 10px;
     display: flex;
     justify-content: center;
     gap: 20px;
-    position: absolute;
-    bottom: 10px; /* Positioned at the bottom of the topbar */
+    width: 100%;
 }
 
 .nav-links a {
@@ -73,7 +78,7 @@ p {
 /* Car Fleet Section */
 .fleet-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(4, 1fr); /* 4 cars per row */
     gap: 20px;
     padding: 20px;
 }
