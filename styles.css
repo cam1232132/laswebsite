@@ -21,7 +21,7 @@ body {
 /* Topbar */
 .topbar {
     background-color: #003366; /* Blue background */
-    padding: 25px 0; /* Increased padding for the topbar */
+    padding: 40px 0; /* Increased padding for topbar */
     text-align: center;
     margin-bottom: 0;
 }
@@ -34,6 +34,15 @@ body {
 
 .topbar a:hover {
     color: grey;
+}
+
+/* Centering "Medic of the Week" Title in the Topbar */
+.medic-of-the-week-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0;
 }
 
 /* Navigation Links */
@@ -61,52 +70,20 @@ body {
     padding: 20px;
 }
 
-/* Footer */
-.footer {
-    background-color: #003366; /* Blue background */
-    color: white;
+/* Medic of the Week Page Content */
+.medic-of-the-week-page {
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    margin-top: auto;
-}
-
-/* Medic of the Week */
-.medic-of-the-week-title {
-    text-align: center;
-    font-size: 2.5em;
-    margin-top: 20px;
-}
-
-.medic-section {
     margin-top: 40px;
 }
 
-.medic-section h2 {
-    text-align: center;
+.medic-of-the-week-page h1 {
+    font-size: 3em;
     font-weight: bold;
 }
 
-.medic-section p {
-    text-align: center;
+.medic-of-the-week-page p {
     font-size: 1.2em;
-}
-
-/* Specific fixes for the Medic of the Week section */
-.medic-section > div {
-    margin-top: 30px;
-}
-
-.medic-section h3 {
-    font-size: 2.2em;
-    text-align: center;
-}
-
-.medic-section .medic-info {
-    text-align: center;
-    font-size: 1.2em;
+    line-height: 1.5;
 }
 
 /* Fleet Page Fixes */
@@ -135,4 +112,16 @@ body {
 .fleet-item:hover {
     background-color: #e0f7fa; /* Blue hover */
     transform: scale(1.05); /* Slight zoom */
+}
+
+/* Footer */
+.footer {
+    background-color: #003366; /* Blue background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
 }
