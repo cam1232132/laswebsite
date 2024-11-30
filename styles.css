@@ -10,24 +10,34 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
-    background-color: #07015c; /* Light gray background for better contrast */
+    background-color: #f8f9fa; /* Light gray background for better contrast */
 }
 
 /* Topbar */
 .topbar {
-    background-color: #07015c; /* Updated to deep purple */
+    background-color: #1b0769; /* Deep purple */
     color: white;
     padding: 10px 0;
     text-align: center;
     font-size: 1.5em;
     font-weight: bold;
+    position: relative;
+}
+
+/* Logo in Topbar */
+.topbar .logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 50px; /* Adjust logo size */
 }
 
 /* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #07015c; /* Matches the topbar */
+    background-color: #1b0769; /* Matches the topbar */
     padding: 10px 0;
 }
 
@@ -78,7 +88,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #07015c; /* Deep purple for footer */
+    background-color: #1b0769; /* Deep purple for footer */
     color: white;
     text-align: center;
     padding: 10px 0;
