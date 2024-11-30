@@ -27,7 +27,7 @@ body {
 /* Logo Image Styling */
 .topbar .logo {
     width: 150px; /* Resize to exactly 50px width */
-    height: 150px; /* Resize to exactly 50px height */
+    height: auto; /* Resize to exactly 50px height */
     display: block;
     margin: 0 auto 10px; /* Centers image and adds spacing below */
 }
