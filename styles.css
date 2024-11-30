@@ -95,7 +95,7 @@ body {
     flex: 1; /* Make all containers take equal space */
     text-align: center;
     max-width: 200px; /* Restrict width for better readability */
-    height: 40px; /* Reduced height for shorter containers */
+    height: 30px; /* Reduced height for shorter containers */
 }
 
 /* Hover effect for each hour item */
