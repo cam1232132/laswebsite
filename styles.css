@@ -13,14 +13,6 @@ body {
     background-color: #f8f9fa; /* Light gray background for better contrast */
 }
 
-/* Primary Logo */
-.primary-logo {
-    max-width: 150px;
-    max-height: 150px;
-    display: block;
-    margin: 0 auto;
-}
-
 /* Topbar */
 .topbar {
     background-color: #1b0769; /* Deep purple */
@@ -30,40 +22,15 @@ body {
     font-size: 1.0em;
     font-weight: bold;
     position: relative;
-}
-
-/* Resize the logo with fixed height and width */
-.topbar .logo {
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin: 0 auto;
-    object-fit: contain;
-}
-
-/* Navigation Links */
-.nav-links {
-    display: flex;
-    justify-content: center;
-    background-color: #1b0769;
-    padding: 10px 0;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
+    width: 100%;
+    z-index: 10; /* Ensure topbar is always on top */
 }
 
 /* Content Section */
 .content {
     flex: 1;
     padding: 20px;
+    margin-top: 80px; /* Ensure content starts below the topbar */
 }
 
 /* FAQ Container - Centering the FAQ content */
@@ -229,31 +196,6 @@ body {
     }
 }
 
-/* Customizing Footer for Website */
-.footer {
-    background-color: #808080; /* Grey background */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    margin-top: auto;
-}
-
-/* General Styles for Various Pages (Fixing Content Padding) */
-.page-container {
-    padding: 20px;
-}
-
-.page-title {
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    color: #1b0769;
-    margin-bottom: 20px;
-}
-
 /* General Layout and Styling for Car Fleet Page */
 .car-fleet-container {
     display: grid;
@@ -280,4 +222,80 @@ body {
 .car-fleet-item:hover {
     background-color: #e0f7fa; /* Blue hover */
     transform: scale(1.05); /* Slight zoom */
+}
+
+/* Large Screens Adjustments */
+@media screen and (min-width: 1200px) {
+    .faq h2 {
+        font-size: 2.2em;
+    }
+
+    .top-five-hours-item, .medic-of-week-item {
+        font-size: 1.1em;
+    }
+
+    .fleet-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Adjustments to ensure that all content stays below topbar */
+body {
+    padding-top: 80px; /* Add padding to body to account for topbar height */
+}
+
+.content {
+    margin-top: 20px;
+}
+
+/* Specific Style Fix for Content Sections with Navigation */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    background-color: #808080; /* Matches the topbar */
+    padding: 10px 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Adjustments for small screen navigation */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links a {
+        margin: 10px 0;
+    }
+}
+
+/* Image Styling for Fleet Pages */
+.fleet-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling for Fleet Item Hover Effects */
+.fleet-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fleet-item:hover {
+    background-color: #e0f7fa;
+    transform: scale(1.05);
 }
