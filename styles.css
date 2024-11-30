@@ -1,4 +1,4 @@
-/* General Resets */
+/* General resets */
 body, html {
     margin: 0;
     padding: 0;
@@ -6,9 +6,10 @@ body, html {
 }
 
 body {
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
+    align-items: center;
 }
 
 /* Topbar Styles */
@@ -20,23 +21,17 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensures the topbar stays above other content */
-}
-
-/* Logo in Topbar */
-.primary-logo {
-    max-width: 150px;
-    max-height: 150px;
-    display: block;
-    margin: 0 auto;
+    z-index: 1000; /* Stays above other content */
 }
 
 /* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #808080; /* Matches the topbar */
+    background-color: #808080;
     padding: 10px 0;
+    width: 100%;
+    margin-top: 60px; /* Space for the fixed topbar */
 }
 
 .nav-links a {
@@ -54,12 +49,15 @@ body {
 .content {
     flex: 1;
     padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Max width for content */
+    box-sizing: border-box;
 }
 
 /* Container Styles (for sections like Medic of the Week, Top Five Hours, etc.) */
-.medic-container, .fleet-item {
+.container {
     width: 80%; /* Adjust width */
-    max-width: 600px; /* Max width */
+    max-width: 800px; /* Max width */
     margin: 20px auto; /* Center horizontally */
     padding: 15px;
     background-color: #f9f9f9;
@@ -69,15 +67,28 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Highlighted Containers (e.g., Current Medic of the Week) */
-.medic-container h3 {
+/* Title Style for Containers */
+.container h2 {
     color: #333;
-    font-size: 1.2em;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Medic of the Week - Current Medic Section */
+.medic-of-the-week .container {
+    background-color: #f0f0f0;
+    border: 2px solid #b0b0b0;
+}
+
+.medic-of-the-week .container h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 /* Footer Styles */
 .footer {
-    width: 100%; /* Ensures full width */
+    width: 100%;
     background-color: #808080;
     color: white;
     text-align: center;
@@ -85,7 +96,7 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 1000; /* Ensures the footer stays above other content */
+    z-index: 1000;
 }
 
 /* Fleet Page Fixes */
@@ -94,6 +105,9 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .fleet-item img {
@@ -112,19 +126,21 @@ body {
 }
 
 .fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover */
-    transform: scale(1.05); /* Slight zoom */
+    background-color: #e0f7fa;
+    transform: scale(1.05);
 }
 
 /* Layout for Medic of the Week and Other Pages */
 .medic-of-the-week {
-    margin-top: 100px; /* Prevents overlap with the fixed topbar */
+    margin-top: 120px; /* Ensures space for the fixed topbar */
     padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Prevents it from getting too wide */
     text-align: center;
 }
 
 .medic-of-the-week h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #333;
 }
 
@@ -152,7 +168,11 @@ body {
         width: 90%;
     }
 
-    .medic-container {
+    .container {
+        width: 90%;
+    }
+
+    .medic-of-the-week {
         width: 90%;
     }
 }
