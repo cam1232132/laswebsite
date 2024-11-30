@@ -23,7 +23,7 @@ body {
 
 /* Topbar */
 .topbar {
-    background-color: #808080;
+    background-color: #00007a;
     padding: 10px 0;
     text-align: center;
 }
@@ -32,12 +32,12 @@ body {
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #808080;
+    background-color: #00007a;
     padding: 10px 0;
 }
 
 .nav-links a {
-    color: white;
+    color: #00007a;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -181,7 +181,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #808080;
+    background-color: #00007a;
     color: white;
     text-align: center;
     padding: 10px 0;
