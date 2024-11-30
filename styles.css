@@ -1,73 +1,69 @@
-/* General Styles */
+/* General reset */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+}
+
+/* Body and overall layout */
+body {
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    min-height: 100vh; /* Ensures the body takes full viewport height */
 }
 
 /* Topbar */
 .topbar {
     background-color: #808080; /* Grey background */
-    padding: 15px 0;
-    text-align: center;
+    padding: 10px 20px; /* Added padding to give space */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if there isn't enough space */
+    position: relative;
     width: 100%;
 }
 
 .primary-logo {
-    max-width: 120px; /* Image size adjusted */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100px;
+    max-height: 100px;
     display: block;
-    margin: 0 auto;
 }
 
-/* Navigation Links */
+.topbar h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}
+
 .nav-links {
     display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
     justify-content: center;
-    background-color: #808080;
-    padding: 10px 0;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
     font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    background-color: #4CAF50; /* Green hover effect */
+    border-radius: 5px;
 }
 
-/* Main Content */
+/* Content Section */
 .content {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Container for Content Sections */
-.container {
-    width: 80%;
-    max-width: 900px; /* Restrict max width for readability */
-    background-color: #fff8e1;
-    margin-bottom: 20px;
+    flex: 1;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-/* Medic Info */
-.medic-info h3 {
-    margin: 10px 0;
-}
-
-.medic-info p {
-    margin: 5px 0;
 }
 
 /* Footer */
@@ -75,27 +71,78 @@ body, html {
     background-color: #808080;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 10px 0;
+    position: relative;
     width: 100%;
     bottom: 0;
-    position: relative;
+    margin-top: auto;
 }
 
-.footer p {
+/* Containers for Top Five Hours and Fleet */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.medic-container {
+    display: inline-block;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.medic-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Top Five Hours and Car Fleet */
+.top-five-hours-container, .fleet-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.top-five-hours-container .medic-container,
+.fleet-container .fleet-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.fleet-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.fleet-item:hover {
+    background-color: #e0f7fa;
+    transform: scale(1.05);
+}
+
+.medic-container p {
     margin: 0;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-    }
-    
-    .nav-links a {
-        margin: 5px 0;
-    }
-
-    .container {
-        width: 90%; /* Full width on smaller screens */
-    }
+/* Ensure Footer stays at the bottom of the page */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+.content {
+    flex-grow: 1;
+}
+
