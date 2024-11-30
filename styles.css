@@ -15,10 +15,11 @@ body {
 }
 
 .primary-logo {
-    max-width: 100px !important;
-    max-height: 100px !important;
+    width: 100px;  /* Set width to 100px */
+    height: 100px; /* Set height to 100px */
+    object-fit: cover;  /* Ensures the image maintains its aspect ratio */
     display: block;
-    margin: 0 auto;
+    margin: 0 auto;  /* Centers the image */
 }
 
 /* Topbar */
