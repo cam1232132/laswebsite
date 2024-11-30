@@ -24,12 +24,13 @@ body {
     position: relative;
 }
 
-/* Logo Image Styling */
+/* Resize the logo with fixed height and width, maintaining aspect ratio */
 .topbar .logo {
-    width: 150px; /* Resize to exactly 50px width */
-    height: auto; /* Resize to exactly 50px height */
+    width: 150px;  /* Set width to 150px */
+    height: 150px; /* Set height to 150px */
     display: block;
-    margin: 0 auto 10px; /* Centers image and adds spacing below */
+    margin: 0 auto; /* Center it horizontally */
+    object-fit: contain; /* Prevent stretching by preserving aspect ratio */
 }
 
 /* Navigation Links */
