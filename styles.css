@@ -16,7 +16,8 @@ body, html {
 }
 
 .primary-logo {
-    max-width: 120px; /* Reduced image size to match other pages */
+    max-width: 120px; /* Image size adjusted */
+    height: auto; /* Maintain aspect ratio */
     display: block;
     margin: 0 auto;
 }
@@ -27,7 +28,6 @@ body, html {
     justify-content: center;
     background-color: #808080;
     padding: 10px 0;
-    margin: 0;
 }
 
 .nav-links a {
@@ -41,7 +41,7 @@ body, html {
     text-decoration: underline;
 }
 
-/* Content Section */
+/* Main Content */
 .content {
     padding: 30px;
     display: flex;
@@ -49,24 +49,25 @@ body, html {
     align-items: center;
 }
 
-/* Containers for Content Sections */
+/* Container for Content Sections */
 .container {
-    width: 80%; /* Makes containers span most of the page */
-    max-width: 800px; /* Optional: Limit the max width */
-    margin: 20px 0;
+    width: 80%;
+    max-width: 900px; /* Restrict max width for readability */
     background-color: #fff8e1;
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Medic of the Week Section */
-.medic-of-week-info h3 {
-    margin-top: 0;
+/* Medic Info */
+.medic-info h3 {
+    margin: 10px 0;
 }
 
-.medic-of-week-info p {
-    margin-top: 5px;
+.medic-info p {
+    margin: 5px 0;
 }
 
 /* Footer */
@@ -74,10 +75,10 @@ body, html {
     background-color: #808080;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     width: 100%;
-    position: relative;
     bottom: 0;
+    position: relative;
 }
 
 .footer p {
@@ -97,19 +98,4 @@ body, html {
     .container {
         width: 90%; /* Full width on smaller screens */
     }
-
-    .topbar h1 {
-        font-size: 20px;
-    }
-}
-
-/* Additional Styles for Medic of the Week Content */
-.medic-of-week-info {
-    width: 80%;
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
