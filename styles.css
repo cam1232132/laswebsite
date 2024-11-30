@@ -10,80 +10,78 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Primary Logo */
-.primary-logo {
-    max-width: 150px;
-    max-height: 150px;
-    display: block;
-    margin: 0 auto;
-}
-
 /* Topbar */
 .topbar {
-    background-color: #003366; /* Blue background */
-    padding: 40px 0; /* Increased padding for topbar */
+    background-color: #0077cc; /* Blue background */
+    padding: 20px 0;
     text-align: center;
-    margin-bottom: 0;
 }
 
-.topbar a {
+.topbar h1 {
     color: white;
-    text-decoration: none;
-    padding: 0 20px;
 }
 
-.topbar a:hover {
-    color: grey;
-}
-
-/* Centering "Medic of the Week" Title in the Topbar */
-.medic-of-the-week-title {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    margin: 0;
+/* Primary Image */
+.primary-image {
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin: 20px 0;
 }
 
 /* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #003366; /* Blue background */
-    padding: 10px 0;
+    background-color: #0077cc; /* Blue background */
+    padding: 15px 0;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 20px;
     font-weight: bold;
 }
 
 .nav-links a:hover {
-    color: grey;
+    color: #808080; /* Grey color on hover */
 }
 
 /* Content Section */
 .content {
     flex: 1;
-    padding: 20px;
-}
-
-/* Medic of the Week Page Content */
-.medic-of-the-week-page {
+    padding: 40px 20px;
     text-align: center;
-    margin-top: 40px;
 }
 
-.medic-of-the-week-page h1 {
-    font-size: 3em;
+.content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.content ul li strong {
     font-weight: bold;
 }
 
-.medic-of-the-week-page p {
-    font-size: 1.2em;
-    line-height: 1.5;
+/* Footer */
+.footer {
+    background-color: #0077cc; /* Blue background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
 }
 
 /* Fleet Page Fixes */
@@ -114,9 +112,66 @@ body {
     transform: scale(1.05); /* Slight zoom */
 }
 
+/* General Page Styles */
+body, html { 
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+/* Topbar */
+.topbar {
+    background-color: #808080; /* Grey background */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.topbar h1 {
+    color: white;
+}
+
+/* Primary Logo */
+.primary-logo {
+    max-width: 150px;
+    max-height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    background-color: #808080; /* Matches the topbar */
+    padding: 10px 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Content Section */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
 /* Footer */
 .footer {
-    background-color: #003366; /* Blue background */
+    background-color: #808080; /* Grey background */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -124,4 +179,15 @@ body {
     width: 100%;
     bottom: 0;
     margin-top: auto;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
 }
