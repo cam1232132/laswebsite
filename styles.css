@@ -13,36 +13,32 @@ body {
 /* Topbar */
 .topbar {
     background-color: #0077cc; /* Blue background */
-    padding: 10px 0;
     display: flex;
-    align-items: flex-end; /* Aligns content to the bottom */
+    flex-direction: column;
     position: relative;
-    min-height: 100px; /* Ensures enough space for logo and links */
+    padding: 20px 10px; /* Ensure enough padding for primary image and links */
+    min-height: 120px; /* Larger height for accommodating all elements */
+}
+
+.primary-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Position primary logo at top-left */
+    max-width: 50px; /* Reduce the logo size */
+    max-height: 50px;
 }
 
 .topbar h1 {
-    flex: 1; /* Takes remaining space to center the title */
-    text-align: center;
     color: white;
+    text-align: center;
     margin: 0;
+    font-size: 2em;
 }
 
-/* Primary Logo in Topbar */
-.primary-logo {
-    position: absolute;
-    top: 10px; /* Places logo at the top-left */
-    left: 10px;
-    max-width: 50px; /* Reduced size */
-    max-height: 50px; /* Reduced size */
-}
-
-/* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: center;
-    flex: 1;
-    background: none;
-    margin-bottom: 10px; /* Positions links at the bottom of the topbar */
+    margin-top: auto; /* Align links to the bottom of the topbar */
 }
 
 .nav-links a {
@@ -50,10 +46,11 @@ body {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    font-size: 1.1em;
 }
 
 .nav-links a:hover {
-    color: #808080; /* Grey color on hover */
+    color: #808080; /* Grey on hover */
 }
 
 /* Content Section */
@@ -155,6 +152,7 @@ body {
 .top-five-hours h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    color: #0077cc;
 }
 
 .top-five-hours ul {
