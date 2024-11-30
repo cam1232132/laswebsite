@@ -67,7 +67,7 @@ body {
     border: 2px solid #FFD700; /* Golden border */
     padding: 15px;
     margin: 15px auto;
-    width: 80%;
+    width: 80%; /* Center containers */
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -93,38 +93,12 @@ body {
     margin-bottom: 20px;
 }
 
-/* Fleet Page */
-.fleet-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.fleet-item img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.fleet-item {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover */
-    transform: scale(1.05); /* Slight zoom */
-}
-
 /* Content for Medic of the Week page */
-.medic-of-the-week h3 {
-    font-size: 1.2rem;
+.medic-of-the-week h2 {
+    font-size: 2rem;
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .medic-container {
@@ -134,6 +108,7 @@ body {
     margin: 20px 0;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 60%; /* Center the containers */
 }
 
 .medic-container:hover {
@@ -190,6 +165,21 @@ h1, h2, h3, p {
 .content {
     margin-top: 20px;
     text-align: center;
+}
+
+/* Centering Medic of the Week content */
+.medic-of-the-week {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure content takes full height of screen */
+}
+
+.medic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensure all content is centered within the container */
 }
 
 /* Responsive Styles */
