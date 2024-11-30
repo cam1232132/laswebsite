@@ -61,73 +61,61 @@ body {
 }
 
 /* Content Section */
-.container {
+.content {
     flex: 1;
     padding: 20px;
-    text-align: center; /* Center-align the content in general */
 }
 
-/* Subtitles Styling */
-.subtitle {
+/* FAQ Container - Centering the FAQ content */
+.faq-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px); /* Adjust height to avoid overlap with topbar/footer */
+    padding: 20px;
+}
+
+.faq {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: left;
+}
+
+.faq h2 {
     text-align: center;
     font-size: 2em;
     font-weight: bold;
-    margin: 30px 0 20px;
-    color: #000;
+    color: #1b0769;
+    margin-bottom: 20px;
 }
 
-/* Medic of the Week Containers */
-.medic-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+/* Question and Answer styling */
+.question {
+    margin-bottom: 15px;
 }
 
-.medic-container div {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    flex: 1 1 200px; /* Ensure equal space and wrapping */
-    text-align: center;
-    min-height: 50px;
-    max-width: 250px;
+.question p {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.medic-container div:hover {
-    background-color: #ffd700;
-    transform: scale(1.05);
+.answer {
+    font-size: 1em;
+    margin-bottom: 15px;
 }
 
-/* Top Five Hours Container */
-.top-five-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+.answer a {
+    color: #1b0769;
+    text-decoration: none;
 }
 
-.top-five-item {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    flex: 1 1 200px; /* Ensure equal space and wrapping */
-    text-align: center;
-    min-height: 50px;
-    max-width: 250px;
-}
-
-.top-five-item:hover {
-    background-color: #ffd700;
-    transform: scale(1.05);
+.answer a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
@@ -166,42 +154,130 @@ body {
 }
 
 .fleet-item:hover {
-    background-color: #e0f7fa;
-    transform: scale(1.05);
+    background-color: #e0f7fa; /* Blue hover */
+    transform: scale(1.05); /* Slight zoom */
 }
 
-/* Responsive Design for Top Five Hours */
+/* Responsive Design for small screens */
 @media screen and (max-width: 768px) {
-    .top-five-container, .medic-container {
-        flex-direction: column;
-        gap: 10px;
+    .faq {
+        padding: 15px;
     }
 
-    .top-five-item, .medic-container div {
-        width: 100%; /* Make the containers take full width on small screens */
-        min-height: 100px;
-    }
-}
-
-/* Responsive Design for fleet container */
-@media screen and (max-width: 768px) {
-    .fleet-container {
-        grid-template-columns: repeat(2, 1fr); /* Two items per row */
-    }
-}
-
-/* Additional Responsive Design for the whole page */
-@media screen and (max-width: 480px) {
-    .topbar h1 {
+    .faq h2 {
         font-size: 1.5em;
     }
 
-    .nav-links a {
-        margin: 0 10px;
+    .question p {
+        font-size: 1em;
+    }
+
+    .answer {
         font-size: 0.9em;
     }
 
-    .footer p {
-        font-size: 0.8em;
+    .fleet-container {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* Page specific styles for Top Five Hours and Medic of the Week */
+.top-five-hours-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.medic-of-week-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.medic-of-week-item {
+    margin: 10px;
+    text-align: center;
+}
+
+/* Top 5 Hours Section */
+.top-five-hours-item {
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.top-five-hours-item:hover {
+    background-color: #e0f7fa; /* Light blue hover */
+    transform: scale(1.05);
+}
+
+/* Small adjustments for small screens */
+@media screen and (max-width: 600px) {
+    .top-five-hours-container, .medic-of-week-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-five-hours-item, .medic-of-week-item {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+
+/* Customizing Footer for Website */
+.footer {
+    background-color: #808080; /* Grey background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* General Styles for Various Pages (Fixing Content Padding) */
+.page-container {
+    padding: 20px;
+}
+
+.page-title {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: #1b0769;
+    margin-bottom: 20px;
+}
+
+/* General Layout and Styling for Car Fleet Page */
+.car-fleet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.car-fleet-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.car-fleet-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.car-fleet-item:hover {
+    background-color: #e0f7fa; /* Blue hover */
+    transform: scale(1.05); /* Slight zoom */
 }
