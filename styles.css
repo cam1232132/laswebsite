@@ -76,30 +76,31 @@ body {
     color: #000;
 }
 
-/* Medic Containers */
-.hours-container {
+/* Medic Containers - Adjust to ensure even size and alignment */
+.medic-container {
     display: flex; /* Use flexbox to arrange items in a row */
-    justify-content: space-evenly; /* Evenly distribute items across the row */
-    gap: 20px; /* Space between the items */
+    justify-content: center; /* Centers the containers in the row */
+    gap: 20px; /* Adds space between containers */
     padding: 20px;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: wrap; /* Allow wrapping if needed */
 }
 
-.hours-container p {
-    background-color: #fff; /* White background for each hour */
+/* Individual Medic Container Styling */
+.medic-container div {
+    background-color: #fff; /* White background for each container */
     border: 1px solid #ccc; /* Light border */
     border-radius: 5px; /* Rounded corners */
-    padding: 8px; /* Reduced padding inside each container */
+    padding: 15px; /* Add padding for internal spacing */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
     transition: transform 0.3s ease, background-color 0.3s ease;
-    flex: 1; /* Make all containers take equal space */
+    flex: 0 0 250px; /* Fixed size for containers */
     text-align: center;
-    max-width: 200px; /* Restrict width for better readability */
-    height: 30px; /* Reduced height for shorter containers */
+    min-height: 150px; /* Set a minimum height */
+    max-width: 250px; /* Maximum width to keep containers uniform */
 }
 
-/* Hover effect for each hour item */
-.hours-container p:hover {
+/* Hover effect for each medic item */
+.medic-container div:hover {
     background-color: #ffd700; /* Gold background on hover */
     transform: scale(1.05); /* Slight zoom effect */
 }
@@ -144,9 +145,14 @@ body {
     transform: scale(1.05); /* Slight zoom */
 }
 
-/* Responsive Design for Top Five Hours */
+/* Responsive Design for smaller screens */
 @media screen and (max-width: 768px) {
-    .hours-container {
-        flex-direction: column; /* Stack the items vertically on smaller screens */
+    .medic-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        gap: 10px; /* Reduced gap for smaller screens */
+    }
+    .medic-container div {
+        width: 100%; /* Ensure the containers take full width */
+        min-height: 100px; /* Adjust min height for smaller screens */
     }
 }
