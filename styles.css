@@ -164,7 +164,7 @@ body {
     padding: 10px; /* Reduced padding inside each container */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
     transition: transform 0.3s ease, background-color 0.3s ease;
-    max-width: 300px; /* Restrict width for better readability */
+    max-width: 250px; /* Restrict width for better readability */
 }
 
 /* Hover effect for each hour item */
