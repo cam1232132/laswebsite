@@ -94,7 +94,7 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
     flex: 1 1 200px; /* Ensure equal space and wrapping */
     text-align: center;
-    min-height: 150px;
+    min-height: 50px;
     max-width: 250px;
 }
 
@@ -121,7 +121,7 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
     flex: 1 1 200px; /* Ensure equal space and wrapping */
     text-align: center;
-    min-height: 150px;
+    min-height: 50px;
     max-width: 250px;
 }
 
