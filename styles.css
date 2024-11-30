@@ -1,23 +1,29 @@
-/* General Body & Layout */
-body, html { 
+/* General Resets */
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
+}
+
+body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    font-family: Arial, sans-serif;
 }
 
 /* Topbar Styles */
 .topbar {
-    width: 100%;
+    width: 100%; /* Ensures full width */
     background-color: #808080;
     padding: 15px;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the topbar stays above other content */
 }
 
+/* Logo in Topbar */
 .primary-logo {
     max-width: 150px;
     max-height: 150px;
@@ -25,8 +31,12 @@ body, html {
     margin: 0 auto;
 }
 
+/* Navigation Links */
 .nav-links {
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #808080; /* Matches the topbar */
+    padding: 10px 0;
 }
 
 .nav-links a {
@@ -44,72 +54,41 @@ body, html {
 .content {
     flex: 1;
     padding: 20px;
-    text-align: center;
-    width: 100%;
 }
 
-/* Medic of the Week Styles */
-.medic-of-the-week {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-    text-align: center;
-}
-
-.medic-container {
-    border: 2px solid #FFD700; /* Gold Border */
-    padding: 20px;
-    margin: 10px;
-    width: 60%; /* You can adjust the width to your liking */
-    background-color: #f1f1f1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Container Styles (for sections like Medic of the Week, Top Five Hours, etc.) */
+.medic-container, .fleet-item {
+    width: 80%; /* Adjust width */
+    max-width: 600px; /* Max width */
+    margin: 20px auto; /* Center horizontally */
+    padding: 15px;
+    background-color: #f9f9f9;
     border-radius: 8px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.medic-container:hover {
-    background-color: #e0e0e0;
-    transform: scale(1.05);
-}
-
-/* Top Five Hours Styles */
-.top-five-hours ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: 18px;
-}
-
-.top-five-hours li {
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid #FFD700; /* Gold Border */
-    width: 60%;
-    background-color: #f1f1f1;
+    border: 2px solid #ccc;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.top-five-hours li:hover {
-    background-color: #e0e0e0;
-    transform: scale(1.05);
+/* Highlighted Containers (e.g., Current Medic of the Week) */
+.medic-container h3 {
+    color: #333;
+    font-size: 1.2em;
 }
 
 /* Footer Styles */
 .footer {
+    width: 100%; /* Ensures full width */
     background-color: #808080;
     color: white;
     text-align: center;
-    padding: 10px;
-    width: 100%;
-    position: relative;
-    margin-top: auto;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the footer stays above other content */
 }
 
-/* Fleet Page Styles */
+/* Fleet Page Fixes */
 .fleet-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -137,18 +116,43 @@ body, html {
     transform: scale(1.05); /* Slight zoom */
 }
 
-/* Mobile Responsiveness */
+/* Layout for Medic of the Week and Other Pages */
+.medic-of-the-week {
+    margin-top: 100px; /* Prevents overlap with the fixed topbar */
+    padding: 20px;
+    text-align: center;
+}
+
+.medic-of-the-week h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.medic-of-the-week h3 {
+    font-size: 1.5em;
+    color: #444;
+}
+
+.medic-of-the-week p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Responsiveness */
 @media (max-width: 768px) {
-    .nav-links a {
-        display: block;
-        margin: 10px 0;
+    .nav-links {
+        flex-direction: column;
     }
-    
-    .top-five-hours li, .medic-container {
-        width: 90%; /* Make the containers take more space on smaller screens */
-    }
-    
+
     .fleet-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fleet-item {
+        width: 90%;
+    }
+
+    .medic-container {
+        width: 90%;
     }
 }
