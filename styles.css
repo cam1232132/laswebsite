@@ -15,8 +15,8 @@ body {
 }
 
 .primary-logo {
-    max-width: 150px !important;
-    max-height: 150px !important;
+    max-width: 100px !important;
+    max-height: 100px !important;
     display: block;
     margin: 0 auto;
 }
