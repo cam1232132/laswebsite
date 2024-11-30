@@ -222,3 +222,33 @@ body {
 .footer-links a:hover {
     text-decoration: underline;
 }
+
+/* Medic of the Week */
+.medic-container .medic-entry.current {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.medic-container .medic-entry.current:hover {
+    transform: scale(1.05);
+    background-color: #ffd700; /* Gold hover effect */
+}
+
+.medic-container .history ul li {
+    margin-bottom: 10px;
+}
+
+.top-five-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.top-five-container .entry:hover {
+    background-color: #ffd700;
+    transform: scale(1.05);
+}
