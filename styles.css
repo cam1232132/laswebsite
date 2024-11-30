@@ -1,77 +1,67 @@
-/* General Reset */
+/* General Styles */
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
     font-family: Arial, sans-serif;
-}
-
-/* Primary Logo */
-.primary-logo {
-    max-width: 50px;
-    max-height: 50px;
-    display: block;
-    margin: 0;
-    position: absolute; /* Keeps logo aligned in the top-left */
-    top: 10px; /* Adjust spacing from top */
-    left: 10px; /* Adjust spacing from left */
+    height: 100%;
 }
 
 /* Topbar */
 .topbar {
     background-color: #0073e6; /* Blue background */
     color: white;
-    padding: 50px 20px; /* Adds extra height to the topbar */
-    position: relative;
-    text-align: center;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between; /* Space between title and links */
+    height: 120px; /* Increased height for better spacing */
+    position: relative;
 }
 
+/* Topbar Title */
 .topbar h1 {
     margin: 0;
     font-size: 24px;
-    font-weight: bold;
-    z-index: 1;
+    text-align: center;
 }
 
-.nav-links {
+/* Primary Image (All Pages) */
+.primary-logo {
+    max-width: 50px; /* Fixed size */
+    max-height: 50px;
     position: absolute;
-    bottom: 10px; /* Moves links to the bottom of the topbar */
-    width: 100%;
+    top: 10px;
+    left: 10px;
+}
+
+/* Navigation Links */
+.nav-links {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    gap: 15px; /* Space between links */
+    margin-top: 10px; /* Spacing below the title */
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
+    color: white; /* White text */
+    text-decoration: none; /* No underline */
     font-weight: bold;
 }
 
 .nav-links a:hover {
-    color: #d9d9d9; /* Grey hover effect */
+    color: #d9d9d9; /* Grey text on hover */
 }
 
 /* Content Section */
 .content {
-    flex: 1;
     padding: 20px;
-    text-align: center; /* Centers content on all pages */
+    text-align: center;
 }
 
 /* Fleet Page */
 .fleet-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
     gap: 20px;
     padding: 20px;
 }
@@ -92,18 +82,62 @@ body {
 }
 
 .fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover */
+    background-color: #e0f7fa; /* Light blue on hover */
     transform: scale(1.05); /* Slight zoom */
 }
 
 /* Footer */
 .footer {
-    background-color: #0073e6; /* Blue background */
+    background-color: #0073e6; /* Blue background to match topbar */
     color: white;
     text-align: center;
     padding: 10px 0;
     position: relative;
     width: 100%;
-    bottom: 0;
     margin-top: auto;
+}
+
+/* Medic of the Week Specific Styles */
+.medic-week-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.medic-week-container h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.medic-week-container .medic-card {
+    margin: 10px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    text-align: left;
+}
+
+.medic-week-container .medic-card h3 {
+    margin: 0 0 10px 0;
+}
+
+/* Top Five Hours Specific Styles */
+.top-five-hours-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.top-five-hours-container h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.top-five-hours-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.top-five-hours-container ul li {
+    font-size: 18px;
+    margin: 10px 0;
 }
