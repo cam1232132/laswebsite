@@ -28,20 +28,21 @@ body {
     left: 0;
 }
 
-/* Content Section */
+/* Ensure content is pushed below the topbar */
 .content {
     flex: 1;
     padding: 20px;
-    margin-top: 80px; /* Ensure content starts below the fixed topbar */
+    margin-top: 80px; /* Added space for the fixed topbar */
 }
 
-/* FAQ Container - Centering the FAQ content */
+/* FAQ Section Styling */
 .faq-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: calc(100vh - 120px); /* Adjust height to avoid overlap with topbar/footer */
+    align-items: flex-start; /* Ensure FAQ starts at the top */
+    height: calc(100vh - 120px); /* Account for topbar + footer space */
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .faq {
@@ -97,34 +98,6 @@ body {
     width: 100%;
     bottom: 0;
     margin-top: auto;
-}
-
-/* Fleet Page Fixes */
-.fleet-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.fleet-item img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.fleet-item {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover */
-    transform: scale(1.05); /* Slight zoom */
 }
 
 /* Responsive Design for small screens */
@@ -201,34 +174,6 @@ body {
     }
 }
 
-/* General Layout and Styling for Car Fleet Page */
-.car-fleet-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.car-fleet-item img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.car-fleet-item {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.car-fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover */
-    transform: scale(1.05); /* Slight zoom */
-}
-
 /* Large Screens Adjustments */
 @media screen and (min-width: 1200px) {
     .faq h2 {
@@ -244,13 +189,13 @@ body {
     }
 }
 
-/* Adjustments to ensure that all content stays below topbar */
+/* Ensure all content is below topbar */
 body {
-    padding-top: 80px; /* Add padding to body to account for topbar height */
+    padding-top: 80px; /* Account for the fixed topbar height */
 }
 
 .content {
-    margin-top: 20px;
+    margin-top: 20px; /* Space between content and topbar */
 }
 
 /* Specific Style Fix for Content Sections with Navigation */
