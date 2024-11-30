@@ -71,6 +71,9 @@ body {
 .top-five-hours {
     width: 80%; /* Adjust width for responsiveness */
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Top Five Hours Item Container */
@@ -82,7 +85,7 @@ body {
     margin-bottom: 20px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     background-color: white; /* White background */
-    font-size: 18px;
+    width: 80%; /* Ensure the containers are responsive */
 }
 
 /* Hover Effect on Top Five Hours Item */
@@ -95,6 +98,9 @@ body {
 .medic-of-the-week {
     width: 80%; /* Adjust width for responsiveness */
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Medic Container (for individual medics) */
@@ -106,6 +112,7 @@ body {
     margin-bottom: 20px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     background-color: white; /* White background */
+    width: 80%; /* Ensure the containers are responsive */
 }
 
 /* Hover Effect on Medic Container */
