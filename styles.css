@@ -13,27 +13,30 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Primary Logo Styling */
-.primary-logo {
-    max-width: 150px;
-    margin: 0 auto;
-    display: block;
-    padding: 10px 0;
-}
-
-/* Topbar */
+/* Topbar Styling */
 .topbar {
-    background-color: #808080;
+    background-color: #808080; /* Grey background */
     padding: 10px 0;
     text-align: center;
+    position: relative;
 }
 
-/* Navigation Links */
+.topbar .primary-logo {
+    max-width: 150px;
+    display: block;
+    margin: 0 auto; /* Center the logo */
+}
+
+/* Navigation Links Styling */
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #808080;
+    align-items: center; /* Ensures vertical centering */
+    background-color: #808080; /* Matches the topbar */
     padding: 10px 0;
+    position: absolute; /* Position links at the bottom of the topbar */
+    bottom: 0;
+    width: 100%;
 }
 
 .nav-links a {
@@ -44,7 +47,19 @@ body {
 }
 
 .nav-links a:hover {
+    color: grey; /* Grey text on hover */
     text-decoration: underline;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #808080; /* Grey background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    position: relative;
+    width: 100%;
 }
 
 /* Containers */
@@ -172,7 +187,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* Footer */
+/* Footer Styling */
 .footer {
     background-color: #808080;
     color: white;
