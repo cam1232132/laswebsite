@@ -1,5 +1,5 @@
 /* General Reset */
-body, html { 
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -11,88 +11,67 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Topbar */
-.topbar {
-    background-color: #0077cc; /* Blue background */
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 20px 10px; /* Padding ensures space for logo and links */
-    min-height: 120px; /* Allows space for the smaller primary logo */
+/* Primary Logo */
+.primary-logo {
+    max-width: 50px;
+    max-height: 50px;
+    display: block;
+    margin: 0;
+    position: absolute; /* Keeps logo aligned in the top-left */
+    top: 10px; /* Adjust spacing from top */
+    left: 10px; /* Adjust spacing from left */
 }
 
-.primary-logo {
-    position: absolute;
-    top: 10px;
-    left: 10px; /* Positioned in top-left */
-    max-width: 50px; /* Small logo size */
-    max-height: 50px;
+/* Topbar */
+.topbar {
+    background-color: #0073e6; /* Blue background */
+    color: white;
+    padding: 50px 20px; /* Adds extra height to the topbar */
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .topbar h1 {
-    color: white;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 2em;
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1;
 }
 
 .nav-links {
+    position: absolute;
+    bottom: 10px; /* Moves links to the bottom of the topbar */
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: auto; /* Align to bottom of topbar */
+    gap: 15px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
     font-weight: bold;
-    font-size: 1.1em;
 }
 
 .nav-links a:hover {
-    color: #808080; /* Grey on hover */
+    color: #d9d9d9; /* Grey hover effect */
 }
 
 /* Content Section */
 .content {
     flex: 1;
-    padding: 40px 20px;
-    text-align: center;
+    padding: 20px;
+    text-align: center; /* Centers content on all pages */
 }
 
-.content h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.content ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.content ul li {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.content ul li strong {
-    font-weight: bold;
-}
-
-/* Footer */
-.footer {
-    background-color: #0077cc; /* Blue footer matches topbar */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: auto;
-}
-
-/* Fleet Page Fixes */
+/* Fleet Page */
 .fleet-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
     gap: 20px;
     padding: 20px;
 }
@@ -117,84 +96,14 @@ body {
     transform: scale(1.05); /* Slight zoom */
 }
 
-/* Medic of the Week Specific */
-.medic-of-week {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-    text-align: center;
-}
-
-.medic-of-week h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.medic-of-week img {
-    max-width: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.medic-of-week p {
-    font-size: 1.2em;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-/* Top Five Hours Specific */
-.top-five-hours {
-    text-align: center;
-    padding: 40px;
-}
-
-.top-five-hours .primary-logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    max-width: 50px;
-    max-height: 50px;
-}
-
-.top-five-hours h1 {
+/* Footer */
+.footer {
+    background-color: #0073e6; /* Blue background */
     color: white;
     text-align: center;
-    font-size: 2.5em;
-    margin: 0;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
 }
-
-.top-five-hours ul {
-    list-style: none;
-    padding: 0;
-}
-
-.top-five-hours ul li {
-    font-size: 1.2em;
-    margin: 15px 0;
-    background-color: #f5f5f5;
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.top-five-hours ul li:hover {
-    background-color: #e0f7fa; /* Light blue hover effect */
-}
-
-/* Responsive Design for Smaller Screens */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-    }
-
-    .nav-links a {
-        margin: 10px 0;
-    }
-
-    .topbar h1 {
-        font-size: 1.5em;
-    }
-}
-
