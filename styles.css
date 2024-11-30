@@ -107,70 +107,99 @@ body {
     transform: scale(1.05); /* Slight zoom */
 }
 
-/* Top Hour Item (Golden Border and Hover Effect) - ONLY for Top Five Hours */
-.top-five-hours .top-hour-container {
+/* Medic of the Week Fixes */
+.medic-of-week .medic-of-week-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 20px;
 }
 
-.top-five-hours .top-hour-item {
-    display: inline-block;
+/* Medic of the Week Item (Golden Border and Hover Effect) */
+.medic-of-week .medic-of-week-item {
+    text-align: center;
     padding: 20px;
     border: 2px solid gold; /* Golden Border */
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    text-align: center; /* Center text inside the container */
     font-size: 18px;
     background-color: white; /* White background */
-    width: calc(20% - 20px); /* Adjust width to fit 5 items in a row with margin */
+    width: 100%;
     box-sizing: border-box;
 }
 
-.top-five-hours .top-hour-item:hover {
+.medic-of-week .medic-of-week-item:hover {
     background-color: #FFD700; /* Golden Hover Effect */
     transform: scale(1.05); /* Slight zoom effect */
 }
 
 /* Mobile and Tablet Responsiveness: Adjust layout for smaller screens */
 @media (max-width: 768px) {
-    .top-five-hours .top-hour-item {
-        width: calc(50% - 20px); /* Two items per row on medium screens */
+    .medic-of-week .medic-of-week-item {
+        width: 50%; /* Two items per row on medium screens */
     }
 }
 
 @media (max-width: 480px) {
-    .top-five-hours .top-hour-item {
+    .medic-of-week .medic-of-week-item {
         width: 100%; /* One item per row on small screens */
     }
 }
 
-/* Medic of the Week Fixes */
-.medic-of-week .medic-of-week-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+/* General Container with Padding */
+.content, .medic-of-week-container, .fleet-container {
+    padding: 20px; /* Ensure containers are padded nicely */
 }
 
-/* Medic of the Week Item (Golden Border and Hover Effect) */
-.medic-of-week .medic-of-week-item {
+/* Specific Section Title Styling */
+h2, h3 {
+    color: #333; /* Dark text for section titles */
+}
+
+/* Topbar Background Color and Text */
+.topbar {
+    background-color: #808080; /* Gray */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* General Body Styling for the Topbar, Footer */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Specific Title Styles */
+h1, h2, h3 {
+    color: #333; /* Dark text */
     text-align: center;
-    padding: 15px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.medic-of-week .medic-of-week-item img {
+/* Footer Styling */
+.footer {
+    background-color: #808080;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    position: relative;
     width: 100%;
-    height: auto;
-    border-radius: 50%;
 }
 
-.medic-of-week .medic-of-week-item:hover {
-    background-color: #FFD700; /* Golden hover effect */
-    transform: scale(1.05); /* Slight zoom */
+/* Footer Text Style */
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Medic of the Week Section */
+.medic-of-week {
+    margin-top: 20px;
+}
+
+/* Remove default list styles for unordered list */
+ul {
+    list-style-type: none;
+    padding: 0;
 }
