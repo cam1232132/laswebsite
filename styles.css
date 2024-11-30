@@ -1,3 +1,4 @@
+/* General Reset */
 body, html { 
     margin: 0;
     padding: 0;
@@ -16,29 +17,29 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 20px 10px; /* Ensure enough padding for primary image and links */
-    min-height: 120px; /* Larger height for accommodating all elements */
+    padding: 20px 10px; /* Padding ensures space for logo and links */
+    min-height: 120px; /* Allows space for the smaller primary logo */
 }
 
 .primary-logo {
     position: absolute;
     top: 10px;
-    left: 10px; /* Position primary logo at top-left */
-    max-width: 50px; /* Reduce the logo size */
+    left: 10px; /* Positioned in top-left */
+    max-width: 50px; /* Small logo size */
     max-height: 50px;
 }
 
 .topbar h1 {
     color: white;
     text-align: center;
-    margin: 0;
+    margin: 0 auto;
     font-size: 2em;
 }
 
 .nav-links {
     display: flex;
     justify-content: center;
-    margin-top: auto; /* Align links to the bottom of the topbar */
+    margin-top: auto; /* Align to bottom of topbar */
 }
 
 .nav-links a {
@@ -81,7 +82,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #0077cc; /* Blue background */
+    background-color: #0077cc; /* Blue footer matches topbar */
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -149,10 +150,19 @@ body {
     padding: 40px;
 }
 
-.top-five-hours h2 {
+.top-five-hours .primary-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.top-five-hours h1 {
+    color: white;
+    text-align: center;
     font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #0077cc;
+    margin: 0;
 }
 
 .top-five-hours ul {
@@ -173,7 +183,7 @@ body {
     background-color: #e0f7fa; /* Light blue hover effect */
 }
 
-/* Responsive design for smaller screens */
+/* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
     .nav-links {
         flex-direction: column;
@@ -187,3 +197,4 @@ body {
         font-size: 1.5em;
     }
 }
+
