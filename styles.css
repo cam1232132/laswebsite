@@ -25,31 +25,37 @@ p {
     line-height: 1.6;
 }
 
-/* Topbar */
-.topbar {
-    background-color: #0056b3;
-    color: white;
-    text-align: center;
-    position: relative;
-    padding: 10px 0;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
 }
 
-.primary-logo {
-    max-width: 80px; /* Adjusted to fit */
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
+/* Topbar Specific to Overview */
+.topbar {
+    background-color: #0056b3; /* Blue color */
+    padding: 20px 0; /* Larger padding for alignment */
+    text-align: center;
+    color: white;
+    position: relative;
 }
 
 .topbar h1 {
+    font-size: 28px; /* Larger font size for title */
     margin: 0;
-    font-size: 24px;
-    font-weight: bold;
     text-align: center;
 }
 
-/* Navigation Links */
+.primary-logo {
+    max-width: 80px; /* Adjusted size for topbar */
+    height: auto;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+/* Navigation Links Specific to Overview */
 .nav-links {
     display: flex;
     justify-content: center;
@@ -68,19 +74,19 @@ p {
     text-decoration: underline;
 }
 
-/* Content */
+/* Content Section Specific to Overview */
 .content {
+    padding: 20px 15px; /* Added padding for spacing from edges */
     flex: 1;
-    padding: 20px 40px; /* Added space around content */
 }
 
-/* Question Container */
 .question-container {
     margin-top: 30px;
+    padding: 20px;
 }
 
 .question-container .question-item {
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Space between questions */
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 5px;
@@ -99,23 +105,34 @@ p {
     line-height: 1.6;
 }
 
-/* Footer */
+.question-item img {
+    max-width: 300px; /* Adjust image size */
+    height: auto;
+    margin: 20px auto;
+}
+
+/* Footer Specific to Overview */
 .footer {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Blue color */
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: auto; /* Sticks footer to bottom */
+    position: relative;
+    width: 100%;
+    margin-top: auto; /* Ensures footer is at the bottom */
 }
 
-/* Responsive Design */
+.footer p {
+    margin: 0;
+}
+
+/* Responsive Design Specific to Overview */
 @media (max-width: 768px) {
-    .content {
-        padding: 10px 20px;
+    .question-container .question-item {
+        padding: 15px;
     }
-    
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: space-around;
+
+    .question-container img {
+        max-width: 100%;
     }
 }
