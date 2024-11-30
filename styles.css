@@ -1,25 +1,31 @@
-/* General Settings */
+/* General Reset */
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
-    height: 100%;
 }
 
+/* Body and Page Layout */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Primary Logo Styling */
+.primary-logo {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0;
 }
 
 /* Topbar */
 .topbar {
-    background-color: #808080; /* Grey background */
-    color: white;
-    text-align: center;
+    background-color: #808080;
     padding: 10px 0;
+    text-align: center;
 }
 
 /* Navigation Links */
@@ -41,23 +47,86 @@ body {
     text-decoration: underline;
 }
 
-/* Main Content Area */
-.content {
-    flex: 1;
-    padding: 20px;
+/* Containers */
+.container {
+    margin: 20px auto;
     max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-.footer {
-    background-color: #808080;
-    color: white;
+/* Top Five Hours Section */
+.top-five-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.top-five-container h2 {
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    margin-top: auto;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.top-five-container .entry {
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+/* Medic of the Week Section */
+.medic-container {
+    text-align: center;
+}
+
+.medic-container img {
+    max-width: 150px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.medic-container h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+.medic-container p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* FAQ Section */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #444;
+}
+
+.faq-container .faq-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.faq-container .faq-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.faq-container .faq-item p {
+    font-size: 1.1rem;
+    color: #555;
 }
 
 /* Fleet Page */
@@ -68,15 +137,6 @@ body {
     padding: 20px;
 }
 
-.fleet-item {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: white;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
 .fleet-item img {
     width: 100%;
     height: auto;
@@ -84,112 +144,26 @@ body {
     border-radius: 5px;
 }
 
+.fleet-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
 .fleet-item:hover {
     background-color: #e0f7fa;
     transform: scale(1.05);
 }
 
-/* FAQ Section */
-.faq-section {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #e8f5e9;
-    border: 1px solid #a5d6a7;
-    border-radius: 8px;
-}
-
-.faq-section h2 {
-    color: #2e7d32;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.faq-item {
-    margin-bottom: 15px;
-}
-
-.faq-item h3 {
-    color: #4caf50;
-    margin: 0 0 5px;
-    font-size: 1.1rem;
-}
-
-.faq-item p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Medic of the Week */
-.medic-week {
+/* Footer */
+.footer {
+    background-color: #808080;
+    color: white;
     text-align: center;
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #e8f5e9;
-    border: 1px solid #a5d6a7;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.medic-week h2 {
-    font-size: 1.5rem;
-    color: #2e7d32;
-}
-
-.medic-week p {
-    font-size: 1rem;
-    color: #4caf50;
-}
-
-/* Leadership Team */
-.leadership-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.leadership-item {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.leadership-item img {
+    padding: 10px 0;
+    margin-top: auto;
+    position: relative;
     width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    border: 2px solid #4caf50;
-}
-
-.leadership-item h3 {
-    margin: 10px 0;
-    font-size: 1.2rem;
-    color: #2e7d32;
-}
-
-.leadership-item p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .fleet-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .leadership-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .fleet-container, .leadership-container {
-        grid-template-columns: 1fr;
-    }
 }
