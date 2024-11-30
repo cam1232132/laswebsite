@@ -90,13 +90,7 @@ body {
     color: #333;
 }
 
-.medic-of-the-week .medic {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* Container for each Medic entry with Golden Border and Hover Effect */
+/* Medic container with Golden Border and Hover effect */
 .medic-container {
     display: inline-block;
     margin-top: 20px;
@@ -104,6 +98,7 @@ body {
     border: 2px solid gold; /* Golden Border */
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: left; /* Align text left inside the container */
 }
 
 .medic-container:hover {
@@ -111,25 +106,9 @@ body {
     transform: scale(1.05); /* Slight zoom effect */
 }
 
-/* FAQ Section */
-.faq {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.faq h2 {
-    font-size: 28px;
-    color: #333;
-}
-
-.faq .question {
-    margin-top: 15px;
-    font-size: 18px;
-}
-
-.faq .answer {
-    font-size: 16px;
-    margin-top: 5px;
+.medic-container h3, .medic-container p {
+    margin: 0; /* Remove margin */
+    padding: 5px 0; /* Padding inside each block */
 }
 
 /* Fleet Page Fixes */
