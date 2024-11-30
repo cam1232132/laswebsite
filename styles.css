@@ -1,11 +1,11 @@
-/* General Resets */
+/* Reset default margin and padding */
 body, html { 
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
-/* Body and Global Styles */
+/* General body and layout */
 body {
     display: flex;
     flex-direction: column;
@@ -19,7 +19,6 @@ body {
     text-align: center;
 }
 
-/* Logo */
 .primary-logo {
     max-width: 150px;
     max-height: 150px;
@@ -27,11 +26,10 @@ body {
     margin: 0 auto;
 }
 
-/* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #808080; /* Matches the topbar */
+    background-color: #808080;
     padding: 10px 0;
 }
 
@@ -46,9 +44,15 @@ body {
     text-decoration: underline;
 }
 
+/* Content Section */
+.content, .medic-of-the-week, .top-five-hours, .fleet-container {
+    flex: 1;
+    padding: 20px;
+}
+
 /* Footer */
 .footer {
-    background-color: #808080; /* Grey background */
+    background-color: #808080;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -58,70 +62,38 @@ body {
     margin-top: auto;
 }
 
-/* Full Page Flexbox Centering */
-.full-page-container {
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    height: 100vh; /* Makes the container take up the full viewport height */
+/* Common container style for Top Five Hours and Medic of the Week */
+.top-five-hour-item, .medic-container {
+    border: 2px solid #FFD700; /* Golden border */
+    padding: 15px;
+    margin: 15px auto;
+    width: 80%;
     text-align: center;
-}
-
-/* Top Five Hours Section */
-.top-five-hours {
-    width: 80%; /* Adjust width for responsiveness */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Top Five Hours Item Container */
-.top-five-hour-item {
-    text-align: center;
-    padding: 20px;
-    border: 2px solid gold; /* Golden border around each item */
-    border-radius: 10px;
-    margin-bottom: 20px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    background-color: white; /* White background */
-    width: 80%; /* Ensure the containers are responsive */
 }
 
-/* Hover Effect on Top Five Hours Item */
-.top-five-hour-item:hover {
-    background-color: #FFD700; /* Golden hover effect */
+.top-five-hour-item:hover, .medic-container:hover {
+    background-color: #f7e7c8; /* Light golden background on hover */
     transform: scale(1.05); /* Slight zoom effect */
 }
 
-/* Medic of the Week Section */
-.medic-of-the-week {
-    width: 80%; /* Adjust width for responsiveness */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.top-five-hour-item h3, .medic-container h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-/* Medic Container (for individual medics) */
-.medic-container {
+.top-five-hour-item p, .medic-container p {
+    font-size: 1rem;
+}
+
+/* Add more specific styling for headers in both sections */
+.top-five-hours h2, .medic-of-the-week h2 {
     text-align: center;
-    padding: 20px;
-    border: 2px solid gold; /* Golden border around each item */
-    border-radius: 10px;
+    font-size: 2rem;
     margin-bottom: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    background-color: white; /* White background */
-    width: 80%; /* Ensure the containers are responsive */
 }
 
-/* Hover Effect on Medic Container */
-.medic-container:hover {
-    background-color: #FFD700; /* Golden hover effect */
-    transform: scale(1.05); /* Slight zoom effect */
-}
-
-/* Fleet Page Fixes */
+/* Fleet Page */
 .fleet-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -149,16 +121,87 @@ body {
     transform: scale(1.05); /* Slight zoom */
 }
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .top-five-hour-item, .medic-container {
-        width: 45%; /* Two items per row on medium screens */
-        margin: 10px auto; /* Center and add margin */
-    }
+/* Content for Medic of the Week page */
+.medic-of-the-week h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-@media (max-width: 480px) {
+.medic-container {
+    padding: 20px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.medic-container:hover {
+    background-color: #f7e7c8; /* Light golden hover effect */
+    transform: scale(1.05);
+}
+
+/* Top Five Hours Page */
+.top-five-hours h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.top-five-hours ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.top-five-hours li {
+    background-color: #f7e7c8;
+    border: 2px solid #FFD700;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.top-five-hours li:hover {
+    background-color: #f0e2b2;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* General Text Styling */
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Padding for text */
+.content, .footer {
+    padding: 20px;
+}
+
+/* Navigation hover styles */
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* General Layout Tweaks */
+.content {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+    .fleet-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .top-five-hour-item, .medic-container {
-        width: 90%; /* One item per row on small screens */
+        width: 90%; /* Reduce width on smaller screens */
     }
 }
