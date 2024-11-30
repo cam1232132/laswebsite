@@ -79,36 +79,22 @@ body {
     margin-top: auto;
 }
 
-/* Medic of the Week */
-.medic-of-the-week {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.medic-of-the-week h2 {
-    font-size: 28px;
-    color: #333;
-}
-
-/* Medic container with Golden Border and Hover effect */
-.medic-container {
+/* Top Hour Item (Golden Border and Hover Effect) */
+.top-hour-item {
     display: inline-block;
-    margin-top: 20px;
+    margin: 10px;
     padding: 15px;
     border: 2px solid gold; /* Golden Border */
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     text-align: left; /* Align text left inside the container */
+    font-size: 18px;
+    background-color: white; /* White background */
 }
 
-.medic-container:hover {
+.top-hour-item:hover {
     background-color: #FFD700; /* Golden Hover Effect */
     transform: scale(1.05); /* Slight zoom effect */
-}
-
-.medic-container h3, .medic-container p {
-    margin: 0; /* Remove margin */
-    padding: 5px 0; /* Padding inside each block */
 }
 
 /* Fleet Page Fixes */
