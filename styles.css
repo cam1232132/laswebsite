@@ -153,26 +153,28 @@ body {
     gap: 20px;
     padding: 20px;
     justify-content: center; /* Centers the grid horizontally */
+    text-align: left; /* Align the content to the left inside each container */
 }
 
-.hour-item {
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
+/* Styling for each hour item */
+.hours-container p {
+    background-color: #fff; /* White background for each hour */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Add padding inside each container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
     transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add light shadow */
 }
 
-/* Gold Hover Effect for Top Five Hours */
-.hour-item:hover {
-    background-color: #ffd700;
-    transform: scale(1.05);
+/* Hover effect for each hour item */
+.hours-container p:hover {
+    background-color: #ffd700; /* Gold background on hover */
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
 /* Responsive Design for Top Five Hours */
 @media screen and (max-width: 768px) {
     .hours-container {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
+        grid-template-columns: 1fr; /* Stack into a single column on smaller screens */
     }
 }
