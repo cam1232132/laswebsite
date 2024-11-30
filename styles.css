@@ -1,23 +1,20 @@
-/* Reset margins and paddings */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
-/* Body styling */
 body {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Light gray background for better contrast */
 }
 
 /* Topbar */
 .topbar {
     background-color: #1b0769; /* Deep purple */
     color: white;
-    padding: 10px 0;
+    padding: 30px 0; /* Increased padding to give space for the logo above the title */
     text-align: center;
     font-size: 1.5em;
     font-weight: bold;
@@ -27,10 +24,16 @@ body {
 /* Logo in Topbar */
 .topbar .logo {
     position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 50px; /* Adjust logo size */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    top: 10px; /* Adjust the space above the title */
+    max-width: 40px; /* Reduced logo size for all pages */
+    max-height: 40px; /* Ensure the height is in proportion */
+}
+
+/* Title in Topbar */
+.topbar h1 {
+    margin-top: 60px; /* Push the title below the logo */
 }
 
 /* Navigation Links */
@@ -53,42 +56,14 @@ body {
 }
 
 /* Content Section */
-.container {
+.content {
     flex: 1;
     padding: 20px;
-    text-align: center; /* Center-align the content in general */
-}
-
-/* Subtitles Styling */
-.subtitle {
-    text-align: center; /* Centers the subtitle */
-    font-size: 2em; /* Increase size */
-    font-weight: bold;
-    margin: 30px 0 20px; /* Adds spacing around */
-    color: #000;
-}
-
-/* Medic Containers */
-.medic-container {
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 15px;
-    text-align: center;
-    margin: 20px auto; /* Centers the containers */
-    max-width: 600px; /* Restrict width for better readability */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Gold Hover Effect */
-.medic-container:hover {
-    background-color: #ffd700; /* Gold background on hover */
-    transform: scale(1.05); /* Slight zoom effect */
 }
 
 /* Footer */
 .footer {
-    background-color: #1b0769; /* Deep purple for footer */
+    background-color: #1b0769; /* Deep purple */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -98,10 +73,72 @@ body {
     margin-top: auto;
 }
 
-/* Fleet Page Grid */
+/* Medic of the Week */
+.medic-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.medic-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+    background-color: #f7f7f7;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.medic-item:hover {
+    background-color: #f2c15c; /* Gold hover effect */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.medic-item p {
+    font-size: 14px;
+}
+
+.medic-item h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Top Five Hours */
+.top-five-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.top-five-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+    background-color: #f7f7f7;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.top-five-item:hover {
+    background-color: #f2c15c; /* Gold hover effect */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.top-five-item p {
+    font-size: 14px;
+}
+
+.top-five-item h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Car Fleet */
 .fleet-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four items per row */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
 }
@@ -121,58 +158,44 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Fleet Item Hover Effect */
 .fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover effect */
+    background-color: #e0f7fa; /* Blue hover */
     transform: scale(1.05); /* Slight zoom */
 }
 
-/* Responsive Design for Fleet Page */
-@media screen and (max-width: 1200px) {
-    .fleet-container {
-        grid-template-columns: repeat(3, 1fr); /* Three items per row for smaller screens */
-    }
+/* Grid Layout for Fleet Page */
+.fleet-item p {
+    font-size: 14px;
+    font-weight: bold;
 }
 
-@media screen and (max-width: 800px) {
-    .fleet-container {
-        grid-template-columns: repeat(2, 1fr); /* Two items per row for tablets */
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .fleet-container {
-        grid-template-columns: 1fr; /* Single column for small screens */
-    }
-}
-
-/* Top Five Hours Page */
-.hours-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px;
-    padding: 20px;
-    justify-content: center; /* Centers the grid horizontally */
-}
-
-.hour-item {
+/* Center Footer */
+footer {
+    background-color: #1b0769;
+    color: white;
     text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add light shadow */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
 }
 
-/* Gold Hover Effect for Top Five Hours */
-.hour-item:hover {
-    background-color: #ffd700;
-    transform: scale(1.05);
+/* Adjustments for Medic of the Week Section */
+.medic-title {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* Responsive Design for Top Five Hours */
-@media screen and (max-width: 768px) {
-    .hours-container {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
-    }
+.medic-subtitle {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Add padding to content for better spacing */
+.content {
+    padding-left: 20px;
+    padding-right: 20px;
 }
