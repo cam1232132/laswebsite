@@ -150,10 +150,10 @@ body {
 .hours-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px;
+    gap: 10px; /* Reduced gap between items */
     padding: 20px;
-    justify-content: center; /* Centers the grid horizontally */
-    text-align: left; /* Align the content to the left inside each container */
+    justify-items: center; /* Centers the items within each grid cell */
+    text-align: center; /* Align the content to the center */
 }
 
 /* Styling for each hour item */
@@ -161,9 +161,10 @@ body {
     background-color: #fff; /* White background for each hour */
     border: 1px solid #ccc; /* Light border */
     border-radius: 5px; /* Rounded corners */
-    padding: 15px; /* Add padding inside each container */
+    padding: 10px; /* Reduced padding inside each container */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
     transition: transform 0.3s ease, background-color 0.3s ease;
+    max-width: 300px; /* Restrict width for better readability */
 }
 
 /* Hover effect for each hour item */
