@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Light gray background for better contrast */
+    background-color: #07015c; /* Light gray background for better contrast */
 }
 
 /* Topbar */
@@ -78,7 +78,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #1b0769; /* Deep purple for footer */
+    background-color: #07015c; /* Deep purple for footer */
     color: white;
     text-align: center;
     padding: 10px 0;
