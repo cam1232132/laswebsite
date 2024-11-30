@@ -34,11 +34,11 @@ body {
 
 /* Resize the logo with fixed height and width, maintaining aspect ratio */
 .topbar .logo {
-    width: 150px;  /* Set width to 150px */
-    height: 150px; /* Set height to 150px */
+    width: 150px;
+    height: 150px;
     display: block;
-    margin: 0 auto; /* Center it horizontally */
-    object-fit: contain; /* Prevent stretching by preserving aspect ratio */
+    margin: 0 auto;
+    object-fit: contain;
 }
 
 /* Navigation Links */
@@ -69,45 +69,45 @@ body {
 
 /* Subtitles Styling */
 .subtitle {
-    text-align: center; /* Centers the subtitle */
-    font-size: 2em; /* Increase size */
+    text-align: center;
+    font-size: 2em;
     font-weight: bold;
-    margin: 30px 0 20px; /* Adds spacing around */
+    margin: 30px 0 20px;
     color: #000;
 }
 
-/* Medic Containers - Adjust to ensure even size and alignment */
-.medic-container {
-    display: flex; /* Use flexbox to arrange items in a row */
-    justify-content: center; /* Centers the containers in the row */
-    gap: 20px; /* Adds space between containers */
+/* Top Five Hours Container */
+.top-five-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
-    flex-wrap: wrap; /* Allow wrapping if needed */
 }
 
-/* Individual Medic Container Styling */
-.medic-container div {
-    background-color: #fff; /* White background for each container */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 15px; /* Add padding for internal spacing */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+/* Individual Top Five Item Styling */
+.top-five-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, background-color 0.3s ease;
-    flex: 0 0 250px; /* Fixed size for containers */
+    flex: 1 1 200px; /* Ensure the items are responsive and take up the available space */
     text-align: center;
-    min-height: 150px; /* Set a minimum height */
-    max-width: 250px; /* Maximum width to keep containers uniform */
+    min-height: 150px; /* Consistent minimum height */
+    max-width: 250px; /* Limit the maximum width */
 }
 
-/* Hover effect for each medic item */
-.medic-container div:hover {
-    background-color: #ffd700; /* Gold background on hover */
+/* Hover effect for each item */
+.top-five-item:hover {
+    background-color: #ffd700; /* Gold color on hover */
     transform: scale(1.05); /* Slight zoom effect */
 }
 
 /* Footer */
 .footer {
-    background-color: #1b0769; /* Deep purple for footer */
+    background-color: #1b0769;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -145,14 +145,37 @@ body {
     transform: scale(1.05); /* Slight zoom */
 }
 
-/* Responsive Design for smaller screens */
+/* Responsive Design for Top Five Hours */
 @media screen and (max-width: 768px) {
-    .medic-container {
-        flex-direction: column; /* Stack items vertically on small screens */
-        gap: 10px; /* Reduced gap for smaller screens */
+    .top-five-container {
+        flex-direction: column;
+        gap: 10px;
     }
-    .medic-container div {
-        width: 100%; /* Ensure the containers take full width */
-        min-height: 100px; /* Adjust min height for smaller screens */
+
+    .top-five-item {
+        width: 100%; /* Ensure containers take up the full width */
+        min-height: 100px;
+    }
+}
+
+/* Responsive Design for fleet container */
+@media screen and (max-width: 768px) {
+    .fleet-container {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row on smaller screens */
+    }
+}
+
+/* Additional Responsive Design for the whole page */
+@media screen and (max-width: 480px) {
+    .topbar h1 {
+        font-size: 1.5em; /* Make header text smaller */
+    }
+    .nav-links a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+
+    .footer p {
+        font-size: 0.8em; /* Adjust footer font size */
     }
 }
