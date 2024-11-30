@@ -23,7 +23,7 @@ body {
 
 /* Topbar */
 .topbar {
-    background-color: #00007a;
+    background-color: #808080;
     padding: 10px 0;
     text-align: center;
 }
@@ -32,12 +32,12 @@ body {
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #00007a;
+    background-color: #808080;
     padding: 10px 0;
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -57,6 +57,65 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Medic of the Week Section */
+.medic-container {
+    text-align: center;
+}
+
+.medic-container h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+.medic-container .medic-entry {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.medic-container .medic-profile {
+    text-align: center;
+}
+
+.medic-container .medic-profile img {
+    max-width: 150px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.medic-container .medic-profile h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+
+.medic-container .medic-profile p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.medic-container .history {
+    margin-top: 20px;
+}
+
+.medic-container .history h3 {
+    font-size: 1.6rem;
+    color: #444;
+}
+
+.medic-container .history ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.medic-container .history ul li {
+    margin-bottom: 8px;
+}
+
 /* Top Five Hours Section */
 .top-five-container {
     display: flex;
@@ -70,55 +129,12 @@ body {
     font-size: 1.5rem;
 }
 
-.top-five-container .hour-card {
+.top-five-container .entry {
     background-color: #e0f7fa;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 5px;
     font-size: 1.2rem;
     text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.top-five-container .hour-card:hover {
-    background-color: gold;
-    transform: scale(1.05);
-}
-
-/* Medic of the Week Section */
-.medic-container {
-    text-align: center;
-}
-
-.medic-container img {
-    max-width: 150px;
-    border-radius: 50%;
-    border: 2px solid #ddd;
-}
-
-.medic-container .medic-card {
-    background-color: #e0f7fa;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.medic-container .medic-card:hover {
-    background-color: gold;
-    transform: scale(1.05);
-}
-
-.medic-container h2 {
-    color: #333;
-    font-size: 1.8rem;
-    margin-top: 10px;
-}
-
-.medic-container p {
-    font-size: 1.2rem;
-    color: #666;
 }
 
 /* FAQ Section */
@@ -181,11 +197,28 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #00007a;
+    background-color: #808080;
     color: white;
     text-align: center;
     padding: 10px 0;
     margin-top: auto;
     position: relative;
     width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
 }
