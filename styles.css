@@ -21,12 +21,6 @@ body, html {
     margin: 0 auto;
 }
 
-.topbar h1 {
-    margin: 10px 0;
-    color: white;
-    font-size: 24px;
-}
-
 /* Navigation Links */
 .nav-links {
     display: flex;
@@ -107,70 +101,6 @@ body, html {
     .topbar h1 {
         font-size: 20px;
     }
-}
-
-/* Fleet Page */
-.fleet-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.fleet-item img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.fleet-item {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover */
-    transform: scale(1.05); /* Slight zoom */
-}
-
-/* About Section */
-.about-section {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.about-section h2 {
-    font-size: 28px;
-}
-
-.about-section p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
-}
-
-/* FAQ Section */
-.faq-container {
-    width: 80%;
-    max-width: 900px;
-    margin: 20px auto;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.faq-container h2 {
-    text-align: center;
-    font-size: 24px;
-}
-
-.faq-question {
-    margin: 20px 0;
 }
 
 /* Additional Styles for Medic of the Week Content */
