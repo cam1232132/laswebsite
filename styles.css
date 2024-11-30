@@ -14,33 +14,41 @@ body {
     background-color: #0056b3;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px;
+    position: relative;
 }
 
+/* Ensure logo is 100px on all pages */
 .primary-logo {
-    height: 60px; /* Adjust this to control size */
+    height: 100px; /* Increased size to 100px */
     width: auto;
-    margin-left: 20px;
+    position: absolute;
+    left: 10px;
 }
 
 .topbar h1 {
     text-align: center;
     flex-grow: 1;
+    font-size: 24px;
+    margin: 0;
 }
 
+/* Navigation Links (at the bottom of the topbar) */
 .nav-links {
     display: flex;
-    justify-content: space-between;
-    background-color: #0056b3;
-    padding: 10px;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    margin: 0 10px;
 }
 
 .nav-links a:hover {
@@ -55,12 +63,12 @@ body {
 
 /* FAQ Section */
 .faq-item {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Add more spacing between questions */
 }
 
 .faq-item h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
+    font-size: 20px; /* Increased text size */
+    margin-bottom: 10px;
 }
 
 /* Footer */
@@ -77,12 +85,10 @@ body {
 /* Ensure footer stays at the bottom */
 html, body {
     height: 100%;
-}
-.content {
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Small logo adjustments for better consistency across pages */
-.primary-logo {
-    height: 50px;
+.content {
+    flex-grow: 1;
 }
