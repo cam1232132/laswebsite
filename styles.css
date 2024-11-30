@@ -23,16 +23,16 @@ body {
 
 /* Topbar */
 .topbar {
-    background-color: #1b0769; /* Updated to deep purple */
+    background-color: #1b0769; /* Deep purple */
     color: white;
-    padding: 20px 0; /* Increased padding for image spacing */
+    padding: 20px 0;
     text-align: center;
     font-size: 1.0em;
     font-weight: bold;
     position: relative;
 }
 
-/* Resize the logo with fixed height and width, maintaining aspect ratio */
+/* Resize the logo with fixed height and width */
 .topbar .logo {
     width: 150px;
     height: 150px;
@@ -45,7 +45,7 @@ body {
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #1b0769; /* Matches the topbar */
+    background-color: #1b0769;
     padding: 10px 0;
 }
 
@@ -76,6 +76,33 @@ body {
     color: #000;
 }
 
+/* Medic of the Week Containers */
+.medic-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.medic-container div {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    flex: 1 1 200px; /* Ensure equal space and wrapping */
+    text-align: center;
+    min-height: 150px;
+    max-width: 250px;
+}
+
+.medic-container div:hover {
+    background-color: #ffd700;
+    transform: scale(1.05);
+}
+
 /* Top Five Hours Container */
 .top-five-container {
     display: flex;
@@ -85,7 +112,6 @@ body {
     padding: 20px;
 }
 
-/* Individual Top Five Item Styling */
 .top-five-item {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -93,16 +119,15 @@ body {
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, background-color 0.3s ease;
-    flex: 1 1 200px; /* Ensure the items are responsive and take up the available space */
+    flex: 1 1 200px; /* Ensure equal space and wrapping */
     text-align: center;
-    min-height: 150px; /* Consistent minimum height */
-    max-width: 250px; /* Limit the maximum width */
+    min-height: 150px;
+    max-width: 250px;
 }
 
-/* Hover effect for each item */
 .top-five-item:hover {
-    background-color: #ffd700; /* Gold color on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+    background-color: #ffd700;
+    transform: scale(1.05);
 }
 
 /* Footer */
@@ -141,19 +166,19 @@ body {
 }
 
 .fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover */
-    transform: scale(1.05); /* Slight zoom */
+    background-color: #e0f7fa;
+    transform: scale(1.05);
 }
 
 /* Responsive Design for Top Five Hours */
 @media screen and (max-width: 768px) {
-    .top-five-container {
+    .top-five-container, .medic-container {
         flex-direction: column;
         gap: 10px;
     }
 
-    .top-five-item {
-        width: 100%; /* Ensure containers take up the full width */
+    .top-five-item, .medic-container div {
+        width: 100%; /* Make the containers take full width on small screens */
         min-height: 100px;
     }
 }
@@ -161,21 +186,22 @@ body {
 /* Responsive Design for fleet container */
 @media screen and (max-width: 768px) {
     .fleet-container {
-        grid-template-columns: repeat(2, 1fr); /* Two items per row on smaller screens */
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
     }
 }
 
 /* Additional Responsive Design for the whole page */
 @media screen and (max-width: 480px) {
     .topbar h1 {
-        font-size: 1.5em; /* Make header text smaller */
+        font-size: 1.5em;
     }
+
     .nav-links a {
         margin: 0 10px;
         font-size: 0.9em;
     }
 
     .footer p {
-        font-size: 0.8em; /* Adjust footer font size */
+        font-size: 0.8em;
     }
 }
