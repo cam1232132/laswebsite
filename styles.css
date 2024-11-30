@@ -21,16 +21,18 @@ body {
     text-align: center;
     font-size: 1.0em;
     font-weight: bold;
-    position: relative;
+    position: fixed;
     width: 100%;
     z-index: 10; /* Ensure topbar is always on top */
+    top: 0;
+    left: 0;
 }
 
 /* Content Section */
 .content {
     flex: 1;
     padding: 20px;
-    margin-top: 80px; /* Ensure content starts below the topbar */
+    margin-top: 80px; /* Ensure content starts below the fixed topbar */
 }
 
 /* FAQ Container - Centering the FAQ content */
@@ -127,6 +129,12 @@ body {
 
 /* Responsive Design for small screens */
 @media screen and (max-width: 768px) {
+    /* Adjust topbar for small screens */
+    .topbar {
+        padding: 15px 0;
+        font-size: 0.9em;
+    }
+
     .faq {
         padding: 15px;
     }
@@ -144,55 +152,52 @@ body {
     }
 
     .fleet-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Page specific styles for Top Five Hours and Medic of the Week */
-.top-five-hours-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.medic-of-week-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.medic-of-week-item {
-    margin: 10px;
-    text-align: center;
-}
-
-/* Top 5 Hours Section */
-.top-five-hours-item {
-    padding: 15px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 5px;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.3s ease;
-}
-
-.top-five-hours-item:hover {
-    background-color: #e0f7fa; /* Light blue hover */
-    transform: scale(1.05);
-}
-
-/* Small adjustments for small screens */
-@media screen and (max-width: 600px) {
-    .top-five-hours-container, .medic-of-week-container {
-        flex-direction: column;
-        align-items: flex-start;
+        grid-template-columns: repeat(2, 1fr); /* Show 2 cars per row */
     }
 
-    .top-five-hours-item, .medic-of-week-item {
+    /* Adjust the layout of the fleet item to make them fit better */
+    .fleet-item {
+        padding: 15px;
         margin-bottom: 10px;
-        width: 100%;
+    }
+}
+
+/* Small adjustments for very small screens (mobile phones) */
+@media screen and (max-width: 480px) {
+    /* Reduce topbar font size and padding */
+    .topbar {
+        padding: 12px 0;
+        font-size: 0.8em;
+    }
+
+    .faq h2 {
+        font-size: 1.3em;
+    }
+
+    .question p {
+        font-size: 0.9em;
+    }
+
+    .answer {
+        font-size: 0.8em;
+    }
+
+    .fleet-container {
+        grid-template-columns: 1fr; /* Stack the fleet items in a single column */
+    }
+
+    .fleet-item {
+        padding: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .footer {
+        padding: 5px 0;
+        font-size: 0.8em;
     }
 }
 
