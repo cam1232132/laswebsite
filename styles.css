@@ -151,14 +151,15 @@ body {
 }
 
 /* Medic of the Week Fixes */
-.medic-of-week-container {
+.medic-of-week .medic-of-week-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
 }
 
-.medic-of-week-item {
+/* Medic of the Week Item (Golden Border and Hover Effect) */
+.medic-of-week .medic-of-week-item {
     text-align: center;
     padding: 15px;
     border: 2px solid #ccc;
@@ -166,13 +167,13 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.medic-of-week-item img {
+.medic-of-week .medic-of-week-item img {
     width: 100%;
     height: auto;
     border-radius: 50%;
 }
 
-.medic-of-week-item:hover {
+.medic-of-week .medic-of-week-item:hover {
     background-color: #FFD700; /* Golden hover effect */
     transform: scale(1.05); /* Slight zoom */
 }
