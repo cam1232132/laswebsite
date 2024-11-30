@@ -6,17 +6,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #f0f0f0;
 }
 
-h2 {
-    font-size: 2rem;
-    color: #333;
+h2, h3 {
     text-align: center;
-}
-
-h3 {
-    font-size: 1.5rem;
-    color: #0056b3;
 }
 
 p {
@@ -25,37 +19,35 @@ p {
     line-height: 1.6;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
+.content {
+    padding: 20px;
 }
 
-/* Topbar Specific to Overview */
+/* Topbar Styling */
 .topbar {
     background-color: #0056b3; /* Blue color */
-    padding: 20px 0; /* Larger padding for alignment */
-    text-align: center;
+    padding: 20px 0;
     color: white;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .topbar h1 {
-    font-size: 28px; /* Larger font size for title */
+    font-size: 30px;
     margin: 0;
-    text-align: center;
 }
 
+/* Primary Logo in Topbar */
 .primary-logo {
-    max-width: 80px; /* Adjusted size for topbar */
-    height: auto;
     position: absolute;
-    left: 15px;
-    top: 15px;
+    left: 20px;
+    top: 20px;
+    width: 80px;
+    height: auto;
 }
 
-/* Navigation Links Specific to Overview */
+/* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: center;
@@ -74,46 +66,31 @@ img {
     text-decoration: underline;
 }
 
-/* Content Section Specific to Overview */
+/* Content Section Styling */
 .content {
-    padding: 20px 15px; /* Added padding for spacing from edges */
     flex: 1;
+    padding: 20px;
+    margin: 0 20px;
 }
 
 .question-container {
-    margin-top: 30px;
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.question-container .question-item {
-    margin-bottom: 30px; /* Space between questions */
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.question-item {
+    width: 48%;
+    margin-bottom: 20px;
 }
 
-.question-container .question-item h3 {
-    font-size: 1.5rem;
-    color: #0056b3;
-    margin-bottom: 15px;
+h2 {
+    text-align: center;
 }
 
-.question-container .question-item p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-}
-
-.question-item img {
-    max-width: 300px; /* Adjust image size */
-    height: auto;
-    margin: 20px auto;
-}
-
-/* Footer Specific to Overview */
+/* Footer Styling */
 .footer {
-    background-color: #0056b3; /* Blue color */
+    background-color: #0056b3;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -126,13 +103,119 @@ img {
     margin: 0;
 }
 
-/* Responsive Design Specific to Overview */
+/* Fleet Container - Grid Setup */
+.fleet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Fleet Item Styling */
+.fleet-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.fleet-item:hover {
+    background-color: #e0f7fa; /* Blue hover effect */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* Fleet Item Image */
+.fleet-item img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design for Car Fleet */
 @media (max-width: 768px) {
-    .question-container .question-item {
-        padding: 15px;
+    .fleet-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cars per row on smaller screens */
     }
 
-    .question-container img {
-        max-width: 100%;
+    .fleet-item img {
+        max-width: 100%; /* Responsive image */
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .question-item {
+        width: 100%;
+    }
+}
+
+/* Medic of the Week / Top Five Hours Styling */
+.medic-of-the-week, .top-five-hours {
+    margin: 20px 0;
+}
+
+.medic-of-the-week h3, .top-five-hours h3 {
+    text-align: center;
+}
+
+/* FAQ Section Styling */
+.faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.faq-item {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.faq-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Specific Page Adjustments */
+.overview .content,
+.medic-of-the-week .content,
+.top-five-hours .content {
+    margin: 0 20px;
+    padding: 20px;
+}
+
+/* Center Content for Small Devices */
+@media (max-width: 600px) {
+    .topbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+
+    .question-item, .faq-item {
+        width: 100%;
+    }
+
+    .fleet-container {
+        grid-template-columns: 1fr;
     }
 }
