@@ -15,7 +15,7 @@ body {
 
 /* Topbar Styling */
 .topbar {
-    background-color: #808080; /* Grey background */
+    background-color: #0b0191; /* Grey background */
     padding: 10px 0;
     text-align: center;
     position: relative;
@@ -32,7 +32,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; /* Ensures vertical centering */
-    background-color: #808080; /* Matches the topbar */
+    background-color: #0b0191; /* Matches the topbar */
     padding: 10px 0;
     width: 100%; /* Ensure it takes full width */
     position: relative; /* Allow for flexible placement */
@@ -54,7 +54,7 @@ body {
 
 /* Footer Styling */
 .footer {
-    background-color: #808080; /* Grey background */
+    background-color: #0b0191; /* Grey background */
     color: white;
     text-align: center;
     padding: 10px 0;
