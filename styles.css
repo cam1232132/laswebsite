@@ -34,9 +34,8 @@ body {
     align-items: center; /* Ensures vertical centering */
     background-color: #808080; /* Matches the topbar */
     padding: 10px 0;
-    position: absolute; /* Position links at the bottom of the topbar */
-    bottom: 0;
-    width: 100%;
+    width: 100%; /* Ensure it takes full width */
+    position: relative; /* Allow for flexible placement */
 }
 
 .nav-links a {
