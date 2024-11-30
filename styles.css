@@ -1,4 +1,4 @@
-/* General Styles for All Pages */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -25,12 +25,13 @@ p {
 
 /* Topbar Styling */
 .topbar {
-    background-color: #0056b3; /* Blue color */
-    padding: 20px 0;
+    background-color: #808080;
+    padding: 30px 0;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .topbar h1 {
@@ -38,7 +39,6 @@ p {
     margin: 0;
 }
 
-/* Primary Logo in Topbar */
 .primary-logo {
     position: absolute;
     left: 20px;
@@ -51,7 +51,7 @@ p {
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #0056b3;
+    background-color: #808080;
     padding: 10px 0;
 }
 
@@ -66,140 +66,139 @@ p {
     text-decoration: underline;
 }
 
-/* Content Section Styling */
-.content {
-    flex: 1;
+/* Footer Styling */
+.footer {
+    background-color: #808080;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Fleet Page Fixes */
+.fleet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     padding: 20px;
-    margin: 0 20px;
 }
 
-.question-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.fleet-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.question-item {
-    width: 48%;
-    margin-bottom: 20px;
+.fleet-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-h2 {
+.fleet-item:hover {
+    background-color: #e0f7fa;
+    transform: scale(1.05);
+}
+
+/* Medic of the Week Page Specific Changes */
+.medic-of-the-week .topbar {
+    background-color: #0056b3; /* Blue for Medic of the Week page */
+    padding: 45px 0; /* 25px taller than the 80px logo */
+}
+
+.medic-of-the-week .topbar h1 {
+    font-size: 30px;
+    margin: 0;
     text-align: center;
 }
 
-/* Footer Styling */
-.footer {
+.medic-of-the-week .primary-logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 80px;
+    height: auto;
+}
+
+.medic-of-the-week .nav-links {
+    display: flex;
+    justify-content: center;
+    background-color: #0056b3;
+    padding: 10px 0;
+}
+
+.medic-of-the-week .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.medic-of-the-week .nav-links a:hover {
+    color: #808080; /* Grey when hovered */
+}
+
+.medic-of-the-week .content {
+    margin: 0 20px;
+    padding: 20px;
+}
+
+/* Current Medic of the Week Section */
+.medic-of-the-week .current-medic-section {
+    margin-top: 40px;
+}
+
+.medic-of-the-week .current-medic-section h2 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.medic-of-the-week .current-medic-section p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Previous Medic of the Week Section */
+.medic-of-the-week .previous-medic-section {
+    margin-top: 40px;
+}
+
+.medic-of-the-week .previous-medic-section h2 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.medic-of-the-week .previous-medic-section p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Footer Styling for Medic of the Week */
+.medic-of-the-week .footer {
     background-color: #0056b3;
     color: white;
     text-align: center;
     padding: 10px 0;
     position: relative;
     width: 100%;
-    margin-top: auto; /* Ensures footer is at the bottom */
+    margin-top: auto;
 }
 
-.footer p {
+.medic-of-the-week .footer p {
     margin: 0;
 }
 
-/* Fleet Container - Grid Setup */
-.fleet-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-/* Fleet Item Styling */
-.fleet-item {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 15px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.fleet-item:hover {
-    background-color: #e0f7fa; /* Blue hover effect */
-    transform: scale(1.05); /* Slight zoom */
-}
-
-/* Fleet Item Image */
-.fleet-item img {
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-    margin-bottom: 15px;
-}
-
-/* Responsive Design for Car Fleet */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .fleet-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 cars per row on smaller screens */
-    }
-
-    .fleet-item img {
-        max-width: 100%; /* Responsive image */
-    }
-
-    .nav-links {
-        flex-direction: column;
-    }
-
-    .question-item {
-        width: 100%;
-    }
-}
-
-/* Medic of the Week / Top Five Hours Styling */
-.medic-of-the-week, .top-five-hours {
-    margin: 20px 0;
-}
-
-.medic-of-the-week h3, .top-five-hours h3 {
-    text-align: center;
-}
-
-/* FAQ Section Styling */
-.faq-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.faq-item {
-    width: 48%;
-    margin-bottom: 20px;
-}
-
-.faq-item h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.faq-item p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-}
-
-/* Specific Page Adjustments */
-.overview .content,
-.medic-of-the-week .content,
-.top-five-hours .content {
-    margin: 0 20px;
-    padding: 20px;
-}
-
-/* Center Content for Small Devices */
-@media (max-width: 600px) {
     .topbar {
-        flex-direction: column;
-        text-align: center;
+        padding: 40px 0;
     }
 
     .nav-links {
@@ -211,11 +210,17 @@ h2 {
         margin: 10px 0;
     }
 
+    .current-medic-section, .previous-medic-section {
+        margin-top: 20px;
+    }
+
     .question-item, .faq-item {
         width: 100%;
     }
+}
 
-    .fleet-container {
-        grid-template-columns: 1fr;
-    }
+/* Specific Page Adjustments */
+.medic-of-the-week .content {
+    margin: 0 20px;
+    padding: 20px;
 }
