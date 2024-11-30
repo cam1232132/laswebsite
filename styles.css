@@ -15,9 +15,9 @@ body {
 }
 
 .primary-logo {
-    max-width: 100px;
-    max-height: 100px;
-    width: 100px; /* Optional, to make the image responsive */
+    max-width: 150px;
+    max-height: 150px;
+    width: 100%; /* Optional, to make the image responsive */
     height: auto;
     display: block;
     margin: 0 auto; /* Center the image */
