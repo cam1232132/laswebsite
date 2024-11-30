@@ -13,35 +13,42 @@ body {
 /* Topbar */
 .topbar {
     background-color: #0077cc; /* Blue background */
-    padding: 20px 0;
-    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    align-items: flex-end; /* Aligns content to the bottom */
+    position: relative;
+    min-height: 100px; /* Ensures enough space for logo and links */
 }
 
 .topbar h1 {
+    flex: 1; /* Takes remaining space to center the title */
+    text-align: center;
     color: white;
+    margin: 0;
 }
 
-/* Primary Image */
-.primary-image {
-    display: block;
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    margin: 20px 0;
+/* Primary Logo in Topbar */
+.primary-logo {
+    position: absolute;
+    top: 10px; /* Places logo at the top-left */
+    left: 10px;
+    max-width: 50px; /* Reduced size */
+    max-height: 50px; /* Reduced size */
 }
 
 /* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #0077cc; /* Blue background */
-    padding: 15px 0;
+    flex: 1;
+    background: none;
+    margin-bottom: 10px; /* Positions links at the bottom of the topbar */
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 15px;
     font-weight: bold;
 }
 
@@ -112,73 +119,60 @@ body {
     transform: scale(1.05); /* Slight zoom */
 }
 
-/* General Page Styles */
-body, html { 
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-body {
+/* Medic of the Week Specific */
+.medic-of-week {
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
-}
-
-/* Topbar */
-.topbar {
-    background-color: #808080; /* Grey background */
-    padding: 10px 0;
+    align-items: center;
+    padding: 40px;
     text-align: center;
 }
 
-.topbar h1 {
-    color: white;
+.medic-of-week h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-/* Primary Logo */
-.primary-logo {
+.medic-of-week img {
     max-width: 150px;
-    max-height: 150px;
-    display: block;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.medic-of-week p {
+    font-size: 1.2em;
+    max-width: 600px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
-/* Navigation Links */
-.nav-links {
-    display: flex;
-    justify-content: center;
-    background-color: #808080; /* Matches the topbar */
-    padding: 10px 0;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-/* Content Section */
-.content {
-    flex: 1;
-    padding: 20px;
-}
-
-/* Footer */
-.footer {
-    background-color: #808080; /* Grey background */
-    color: white;
+/* Top Five Hours Specific */
+.top-five-hours {
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    margin-top: auto;
+    padding: 40px;
+}
+
+.top-five-hours h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.top-five-hours ul {
+    list-style: none;
+    padding: 0;
+}
+
+.top-five-hours ul li {
+    font-size: 1.2em;
+    margin: 15px 0;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-five-hours ul li:hover {
+    background-color: #e0f7fa; /* Light blue hover effect */
 }
 
 /* Responsive design for smaller screens */
@@ -189,5 +183,9 @@ body {
 
     .nav-links a {
         margin: 10px 0;
+    }
+
+    .topbar h1 {
+        font-size: 1.5em;
     }
 }
