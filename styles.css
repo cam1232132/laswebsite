@@ -79,15 +79,23 @@ body {
     margin-top: auto;
 }
 
+/* Top Hour Container for Top Five Hours page */
+.top-five-hours .top-hour-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
 /* Top Hour Item (Golden Border and Hover Effect) */
-.top-hour-item {
+.top-five-hours .top-hour-item {
     display: inline-block;
-    margin: 10px;
-    padding: 15px;
+    padding: 20px;
     border: 2px solid gold; /* Golden Border */
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    text-align: left; /* Align text left inside the container */
+    text-align: center; /* Center text inside the container */
     font-size: 18px;
     background-color: white; /* White background */
     width: calc(20% - 20px); /* Adjust width to fit 5 items in a row with margin */
@@ -95,21 +103,21 @@ body {
 }
 
 /* Hover Effect for Top Hour Item */
-.top-hour-item:hover {
+.top-five-hours .top-hour-item:hover {
     background-color: #FFD700; /* Golden Hover Effect */
     transform: scale(1.05); /* Slight zoom effect */
 }
 
 /* Mobile and Tablet Responsiveness: Adjust layout for smaller screens */
 @media (max-width: 768px) {
-    .top-hour-item {
+    .top-five-hours .top-hour-item {
         width: calc(50% - 20px); /* Two items per row on medium screens */
     }
 }
 
 /* Mobile Layout: Stack items in one column */
 @media (max-width: 480px) {
-    .top-hour-item {
+    .top-five-hours .top-hour-item {
         width: 100%; /* One item per row on small screens */
     }
 }
