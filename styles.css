@@ -11,6 +11,7 @@ body {
     flex-direction: column;
     font-family: Arial, sans-serif;
     background-color: #f8f9fa; /* Light gray background for better contrast */
+    min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
 }
 
 /* Primary Logo */
@@ -29,16 +30,6 @@ body {
     text-align: center;
     font-size: 1.0em;
     font-weight: bold;
-    position: relative;
-}
-
-/* Resize the logo with fixed height and width */
-.topbar .logo {
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin: 0 auto;
-    object-fit: contain;
 }
 
 /* Navigation Links */
@@ -64,7 +55,7 @@ body {
 
 /* FAQ Section */
 .faq-container {
-    flex: 1;
+    flex: 1; /* This ensures the FAQ container takes up all available space */
     padding: 40px 20px;
     text-align: center;
 }
@@ -98,10 +89,7 @@ body {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: relative;
     width: 100%;
-    bottom: 0;
-    margin-top: auto;
 }
 
 /* Responsive Design for smaller screens */
@@ -140,14 +128,13 @@ html, body {
     height: 100%;
 }
 
-/* Ensures footer sticks at the bottom */
+/* Ensure footer sticks at the bottom of the page */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Take at least the full height of the screen */
 }
 
-/* Main content area takes remaining space */
 .faq-container {
     flex: 1;
     padding: 40px 20px;
@@ -204,11 +191,11 @@ a:hover {
 
 /* Make sure footer is at the bottom */
 .footer {
-    position: absolute;
-    bottom: 0;
+    position: relative; /* Footer position is relative now */
     width: 100%;
     background-color: #1b0769;
     color: white;
     text-align: center;
     padding: 15px 0;
+    margin-top: auto; /* Ensures it is pushed to the bottom */
 }
