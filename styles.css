@@ -1,37 +1,37 @@
-/* General styles */
+/* General Reset */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Primary Logo */
+.primary-logo {
+    max-width: 150px;
+    max-height: 150px;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Topbar */
 .topbar {
-    background-color: #808080;
-    color: white;
-    text-align: center;
+    background-color: #1b0769; /* Updated topbar color */
     padding: 10px 0;
-    position: relative;
-    width: 100%;
+    text-align: center;
+    color: white;
 }
 
-.primary-logo {
-    max-width: 150px;
-    height: auto;
-    margin: 0 auto;
-}
-
-/* Navigation links */
 .nav-links {
     display: flex;
     justify-content: center;
-    background-color: #808080;
+    background-color: #1b0769; /* Matches topbar */
     padding: 10px 0;
 }
 
@@ -46,34 +46,31 @@ body {
     text-decoration: underline;
 }
 
-/* Content containers */
+/* Content Section */
 .container {
-    flex: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Fleet Container */
 .fleet-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cars per row */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
+    margin: 20px 0;
 }
 
 .fleet-item {
+    text-align: center;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.fleet-item:hover {
-    background-color: #e0f7fa;
-    transform: scale(1.05);
 }
 
 .fleet-item img {
@@ -82,63 +79,87 @@ body {
     border-radius: 5px;
 }
 
-.fleet-item p {
-    padding: 10px;
+.fleet-item:hover {
+    background-color: #e0f7fa; /* Blue hover effect for fleet */
+    transform: scale(1.05);
 }
 
-/* Medic of the Week */
-.medic-container {
-    border: 1px solid #DAA520;
-    border-radius: 5px;
+/* Medic of the Week & Top Five Hours */
+.medic-container, .hours-container {
+    text-align: center;
     padding: 15px;
-    margin: 10px 0;
-    width: 100%;
+    margin: 10px auto;
     max-width: 600px;
-    text-align: center;
-    background-color: #fff;
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    transition: background-color 0.3s ease;
 }
 
-.medic-container:hover {
-    transform: scale(1.05);
-    border-color: gold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Top Five Hours */
-.top-five-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    padding: 20px;
-    margin: 0 auto;
-}
-
-.top-five-item {
-    border: 1px solid #DAA520;
-    border-radius: 5px;
-    padding: 15px;
-    width: 45%;
-    background-color: #fff;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-}
-
-.top-five-item:hover {
-    transform: scale(1.05);
-    border-color: gold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.medic-container:hover, .hours-container:hover {
+    background-color: #FFD700; /* Gold hover effect */
 }
 
 /* Footer */
 .footer {
-    background-color: #808080;
+    background-color: #1b0769; /* Updated footer color */
     color: white;
     text-align: center;
     padding: 10px 0;
-    width: 100%;
-    position: relative;
     margin-top: auto;
+    position: relative;
+    width: 100%;
+}
+
+/* Fleet Page Fixes */
+.fleet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.fleet-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fleet-item:hover {
+    background-color: #e0f7fa; /* Blue hover */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* Additional Page-Specific Styling */
+
+/* Overview Page */
+.overview-container {
+    padding: 20px;
+    text-align: justify;
+}
+
+/* FAQ Section */
+.faq-container {
+    padding: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fleet-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        margin: 5px;
+    }
 }
