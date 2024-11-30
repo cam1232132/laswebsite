@@ -96,21 +96,6 @@ body {
     color: #666;
 }
 
-/* Current Medic of the Week */
-.medic-container .medic-entry.current {
-    background-color: #e0f7fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.medic-container .medic-entry.current:hover {
-    transform: scale(1.05);
-    background-color: #ffd700; /* Gold hover effect */
-}
-
-/* History of Medic of the Week */
 .medic-container .history {
     margin-top: 20px;
 }
@@ -134,22 +119,57 @@ body {
 /* Top Five Hours Section */
 .top-five-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 20px; /* Space between items */
     padding: 20px;
+}
+
+.top-five-container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .top-five-container .entry {
     background-color: #e0f7fa;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 8px;
     font-size: 1.2rem;
     text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .top-five-container .entry:hover {
-    background-color: #ffd700;
-    transform: scale(1.05);
+    background-color: #ffd700; /* Gold hover effect */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Fleet Page Layout */
+.fleet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cars per row */
+    gap: 20px;
+    padding: 20px;
+}
+
+.fleet-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fleet-item:hover {
+    background-color: #e0f7fa; /* Blue hover */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+.fleet-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 /* Footer */
@@ -163,30 +183,72 @@ body {
     width: 100%;
 }
 
-/* Fleet Page */
-.fleet-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+/* Topbar and Footer styling on different pages */
+.topbar.white, .footer.white {
+    background-color: white;
+    color: #333;
+}
+
+.topbar.white .primary-logo {
+    max-width: 120px;
+    margin: 0 auto;
+}
+
+/* Adjustments for other pages */
+.content {
     padding: 20px;
+    flex-grow: 1;
 }
 
-.fleet-item img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.content h1, .content h2 {
+    font-size: 2rem;
+    color: #333;
 }
 
-.fleet-item {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+.content ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.fleet-item:hover {
-    background-color: #e0f7fa;
-    transform: scale(1.05);
+.content li {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.content li a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.content li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    .top-five-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+    }
+
+    .fleet-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cars per row on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .top-five-container {
+        grid-template-columns: 1fr; /* 1 item per row on mobile */
+    }
+
+    .fleet-container {
+        grid-template-columns: 1fr; /* 1 car per row on mobile */
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
 }
