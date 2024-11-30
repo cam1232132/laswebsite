@@ -1,94 +1,146 @@
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
+/* Reset default margin and padding */
+body, html { 
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    height: 100%;
+}
+
+/* Body and overall layout */
+body {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
 /* Topbar */
 .topbar {
-    background-color: #0056b3;
-    color: white;
+    background-color: #808080; /* Grey background */
+    padding: 10px 20px; /* Added padding to give space */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    position: relative;
+    flex-wrap: wrap; /* Allow wrapping if there isn't enough space */
 }
 
-/* Ensure logo is 100px on all pages */
+/* Primary Logo */
 .primary-logo {
-    height: 100px; /* Increased size to 100px */
-    width: auto;
-    position: absolute;
-    left: 10px;
+    max-width: 100px; /* Set the image size */
+    max-height: 100px;
+    display: block;
 }
 
+/* Topbar Title */
 .topbar h1 {
+    flex: 1;
     text-align: center;
-    flex-grow: 1;
     font-size: 24px;
-    margin: 0;
+    color: white;
+    margin: 0; /* Remove default margin */
 }
 
-/* Navigation Links (at the bottom of the topbar) */
+/* Navigation Links */
 .nav-links {
     display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Allow links to wrap if needed */
     justify-content: center;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
+    margin: 0;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 10px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: gray;
+    background-color: #4CAF50; /* Green hover effect */
+    border-radius: 5px;
 }
 
 /* Content Section */
 .content {
+    flex: 1;
     padding: 20px;
-    flex-grow: 1;
-}
-
-/* FAQ Section */
-.faq-item {
-    margin-bottom: 20px; /* Add more spacing between questions */
-}
-
-.faq-item h3 {
-    font-size: 20px; /* Increased text size */
-    margin-bottom: 10px;
+    text-align: center;
 }
 
 /* Footer */
 .footer {
-    background-color: #0056b3;
+    background-color: #808080;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 10px 0;
     position: relative;
     width: 100%;
     bottom: 0;
+    margin-top: auto;
 }
 
-/* Ensure footer stays at the bottom */
-html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+/* Medic of the Week */
+.medic-of-the-week {
+    margin-top: 20px;
+    text-align: center;
 }
 
-.content {
-    flex-grow: 1;
+.medic-of-the-week h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.medic-of-the-week .medic {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* FAQ Section */
+.faq {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.faq .question {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.faq .answer {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Fleet Page Fixes */
+.fleet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.fleet-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.fleet-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fleet-item:hover {
+    background-color: #e0f7fa; /* Blue hover */
+    transform: scale(1.05); /* Slight zoom */
 }
