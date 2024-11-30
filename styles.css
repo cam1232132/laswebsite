@@ -1,123 +1,79 @@
-/* General reset */
+/* General styles */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: Arial, sans-serif;
 }
 
-/* Body and overall layout */
 body {
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
-    min-height: 100vh; /* Ensures the body takes full viewport height */
 }
 
 /* Topbar */
 .topbar {
-    background-color: #808080; /* Grey background */
-    padding: 10px 20px; /* Added padding to give space */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow wrapping if there isn't enough space */
-    position: relative;
-    width: 100%;
-}
-
-.primary-logo {
-    max-width: 100px;
-    max-height: 100px;
-    display: block;
-}
-
-.topbar h1 {
-    flex: 1;
-    text-align: center;
-    font-size: 24px;
-    color: white;
-    margin: 0;
-}
-
-.nav-links {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease;
-}
-
-.nav-links a:hover {
-    background-color: #4CAF50; /* Green hover effect */
-    border-radius: 5px;
-}
-
-/* Content Section */
-.content {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Footer */
-.footer {
     background-color: #808080;
     color: white;
     text-align: center;
     padding: 10px 0;
     position: relative;
     width: 100%;
-    bottom: 0;
-    margin-top: auto;
 }
 
-/* Containers for Top Five Hours and Fleet */
-.container {
-    max-width: 1100px;
+.primary-logo {
+    max-width: 150px;
+    height: auto;
     margin: 0 auto;
-    padding: 20px;
 }
 
-.medic-container {
-    display: inline-block;
-    padding: 20px;
-    margin: 10px;
-    border: 2px solid goldenrod;
-    border-radius: 10px;
-    width: 200px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.medic-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Top Five Hours and Car Fleet */
-.top-five-hours-container, .fleet-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.top-five-hours-container .medic-container,
-.fleet-container .fleet-item {
+/* Navigation links */
+.nav-links {
     display: flex;
     justify-content: center;
+    background-color: #808080;
+    padding: 10px 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Content containers */
+.container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+}
+
+.fleet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cars per row */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.fleet-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fleet-item:hover {
+    background-color: #e0f7fa;
+    transform: scale(1.05);
 }
 
 .fleet-item img {
@@ -126,23 +82,63 @@ body {
     border-radius: 5px;
 }
 
-.fleet-item:hover {
-    background-color: #e0f7fa;
+.fleet-item p {
+    padding: 10px;
+}
+
+/* Medic of the Week */
+.medic-container {
+    border: 1px solid #DAA520;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.medic-container:hover {
     transform: scale(1.05);
+    border-color: gold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.medic-container p {
-    margin: 0;
-}
-
-/* Ensure Footer stays at the bottom of the page */
-body {
+/* Top Five Hours */
+.top-five-container {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
 }
 
-.content {
-    flex-grow: 1;
+.top-five-item {
+    border: 1px solid #DAA520;
+    border-radius: 5px;
+    padding: 15px;
+    width: 45%;
+    background-color: #fff;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
+.top-five-item:hover {
+    transform: scale(1.05);
+    border-color: gold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #808080;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+}
